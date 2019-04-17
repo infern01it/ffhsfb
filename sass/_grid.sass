@@ -1,0 +1,91 @@
+$lgCols: 8
+$mdCols: 6
+$smCols: 6
+
+$lgBp: 1000px
+$mdBp: 768px
+$smBp: 375px
+
+$lgGutter: 30px
+$mdGutter: 20px
+$smGutter: 10px
+
+.container
+	width: 100%
+	max-width: 1320px
+
+.row
+	display: flex
+	flex-wrap: wrap
+
+@media ( min-width: $smBp )
+	.offset-0
+		margin-left: 0
+
+	%grid-column-sm
+		position: relative
+		width: 100%
+		min-height: 1px
+		padding-right: ($smGutter / 2)
+		padding-left: ($smGutter / 2)
+
+	@for $i from 1 through $smCols
+		$w: 100% / $smCols * $i
+
+		.col-#{$i}
+			@extend %grid-column-sm !optional
+
+		.col-#{$i}
+			max-width: $w
+			flex: 0 0 $w
+
+		.offset-#{$i}
+			margin-left: $w
+
+@media ( min-width: $mdBp )
+	.offset-md-0
+		margin-left: 0
+
+	%grid-column-sm
+		position: relative
+		width: 100%
+		min-height: 1px
+		padding-right: ($smGutter / 2)
+		padding-left: ($smGutter / 2)
+
+	@for $i from 1 through $mdCols
+		$w: 100% / $mdCols * $i
+
+		.col-md-#{$i}
+			@extend %grid-column-md !optional
+
+		.col-md-#{$i}
+			max-width: $w
+			flex: 0 0 $w
+
+		.offset-md-#{$i}
+			margin-left: $w
+
+@media ( min-width: $lgBp )
+	.offset-lg-0
+		margin-left: 0
+
+	%grid-column-sm
+		position: relative
+		width: 100%
+		min-height: 1px
+		padding-right: ($smGutter / 2)
+		padding-left: ($smGutter / 2)
+
+	@for $i from 1 through $lgCols
+		$w: 100% / $lgCols * $i
+
+		.col-lg-#{$i}
+			@extend %grid-column-lg !optional
+
+		.col-lg-#{$i}
+			max-width: $w
+			flex: 0 0 $w
+
+		.offset-lg-#{$i}
+			margin-left: $w

@@ -1,0 +1,21 @@
+// Общие настройки
+$font-formats: ("eot", "woff", "ttf"); // Доступны в snippets - eot, woff2, woff, ttf, svg
+$url-img: '/img';
+$url-font: '/fonts';
+
+// Переменные цветов
+
+// Настройки Bootstrap 
+$breakpoints: (
+	'xs': 0,
+	'sm': 768px,
+	'md': 992px,
+	'lg': 1200px
+) !default;
+
+$max-widths: (
+	'xs': 100%,
+	'sm': 720px,
+	'md': 960px,
+	'lg': 1320px
+) !default;
