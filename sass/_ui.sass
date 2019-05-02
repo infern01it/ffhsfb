@@ -11,16 +11,132 @@ body
 body
 	min-width: 320px
 	position: relative
-	font-family: "Raleway", sans-serif
-	font-size: 18px
-	line-height: 24px
+	font-family: "GothamPro", sans-serif
+	font-size: 14px
+	line-height: 22px
 	font-weight: 400
+	color: #1a1a1a
 
 section
 	position: relative
 
-srtong, b
+strong, b
 	font-weight: 700
 
 em, i
 	font-style: italic
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4
+	font-family: "GothamPro"
+	letter-spacing: 0
+
+h1, .h1
+	font-size: 46px
+	font-weight: 400
+	line-height: 66px
+
++media(md)
+	h1, .h1
+		font-size: 28px
+		line-height: 44px
+
+h2, .h2
+	font-size: 26px
+	font-weight: 500
+	line-height: 44px
+
++media(md)
+	h2, .h2
+		font-size: 18px
+		line-height: 22px
+
+h3, .h3
+	font-size: 16px
+	font-weight: 500
+	line-height: 22px
+
+h4, .h4
+	font-size: 14px
+	font-weight: 500
+	line-height: 22px
+
+// Мелкий текст
+.sm-text
+	font-size: 11px
+	line-height: normal
+	letter-spacing: 0.5px
+	color: #474747
+
+a.sm-text
+	text-decoration: none
+	&:hover
+		color: #1a1a1a
+
+// Кнопки
+.btn
+	display: inline-block
+	padding: 0
+	min-width: 300px
+	height: 50px
+	border: none
+	outline: none !important
+	background-color: $ac
+	cursor: pointer
+	font-family: 'GothamPro'
+	font-weight: 500
+	font-size: 12px
+	line-height: 50px
+	text-transform: uppercase
+	text-decoration: none !important
+	text-align: center
+	color: #ffffff !important
+	&:hover
+		background-color: $acHover
+
+// Ссылка "подробнее" со стрелкой
+.more-link
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	text-decoration: none
+	&:hover
+		color: #1a1a1a
+	&__text
+		@extend .sm-text
+	&__arrow
+		margin: 0 0 0 20px
+
+// Контентная область
+.b-content
+	> *:last-child
+		margin: 0
+
+// Стилизованная карточка с загнутым углом
+.b-styled
+	$p: &
+	position: relative
+	transition: all .2s ease-out
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 25px
+		height: 25px
+		transition: all .2s ease-out
+	&_bg
+		&_white::after
+			background-image: linear-gradient(135deg, rgba(#131212, .058) 0%, rgba(#131212, .058) 50%, #fff 51%, #fff 100%)
+		&_dark::after
+			background-image: linear-gradient(135deg, rgba(#131212, .058) 0%, rgba(#131212, .058) 50%, #242424 51%, #242424 100%)
+	&_color
+		&_gray
+			background-color: #f8f7f7
+		&_ac
+		&_white
+	&:hover
+		&#{$p}
+			&_color
+				&_gray
+					background-color: $ac

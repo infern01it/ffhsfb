@@ -3,19 +3,26 @@ $font-formats: ("eot", "woff", "ttf"); // Доступны в snippets - eot, wo
 $url-img: '/img';
 $url-font: '/fonts';
 
-// Переменные цветов
+// Отступы между колонками
+$lgGutter: 30px;
+$mdGutter: 20px;
+$smGutter: 10px;
+
+// Цвета
+$ac: #e2241b;
+$acHover: #be1d16;
+$text: #1a1a1a;
+$textGray: #474747;
 
 // Настройки Bootstrap 
 $breakpoints: (
-	'xs': 0,
-	'sm': 768px,
-	'md': 992px,
-	'lg': 1200px
+	'sm': 0,
+	'md': 768px,
+	'lg': 1000px
 ) !default;
 
 $max-widths: (
-	'xs': 100%,
-	'sm': 720px,
-	'md': 960px,
-	'lg': 1320px
+	'sm': 100%,
+	'md': 720px,
+	'lg': 960px
 ) !default;
