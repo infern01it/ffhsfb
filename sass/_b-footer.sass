@@ -1,0 +1,152 @@
+.footer
+	background-color: #242424
+	&__top
+		padding-top: 55px
+		padding-bottom: 20px
+	&__bottom
+		padding-top: 26px
+		padding-bottom: 33px
+		border-top: 1px solid rgba(#fff, .1)
+	&__social
+		display: none
+	&__copy
+		font-size: 12px
+		line-height: 22px
+		color: #ffffff
+	&__pdfs
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		a
+			display: inline-block
+			font-size: 12px
+			line-height: 22px
+			color: #ffffff !important
+			opacity: 0.4
+			margin-left: 38px
+			&:first-child
+				margin-left: 0
+	&__menu
+		&_1, &_2
+			margin-bottom: 45px
+		&_6
+			display: none
+
++media(md)
+	.footer
+		&__top
+			padding: 32px 10px 40px
+		&__bottom
+			padding: 27px 10px 25px
+		&__logo-wrap
+			margin: 0 0 36px
+		&__social
+			display: block
+		&__copy
+			text-align: center
+			margin-bottom: 25px
+		&__pdfs
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			a
+				margin-left: 0
+		&__menu
+			&_1, &_2, &_3, &_4, &_5
+				margin-bottom: 24px
+			&_6
+				display: block
+
+.footer-logo
+	display: inline-block
+
+.footer-contacts
+	&__adress,
+	&__phone a,
+	&__email a,
+	&__site a
+		font-size: 14px
+		line-height: 22px
+		color: #ffffff
+	&__links
+		margin-bottom: 10px
+
++media(md)
+	.footer-contacts
+		&__adress
+			margin-bottom: 20px
+		&__links
+			display: flex
+			margin-right: -10px
+			margin-left: -10px
+			margin-bottom: 69px
+		&__phone,
+		&__email
+			+b4col(50%)
+			padding-left: 10px
+			padding-right: 10px
+		&__site,
+		&__socials
+			display: none
+
+.footer-socials
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin: 0 -10px
+	padding: 0
+	list-style: none
+	&__link
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		width: 30px
+		height: 30px
+	&__icon
+		opacity: 0.4
+		path
+			fill: #fff
+
++media(md)
+	.footer-socials
+		margin: 0
+
+.footer-menu
+	&__title
+		display: inline-block
+		margin-bottom: 25px
+	&__title,
+	&__footer-link
+		font-size: 13px
+		line-height: 18px
+		color: #ffffff !important
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+	&__item
+	&__link
+		font-size: 12px
+		line-height: 22px
+		color: #ffffff !important
+		opacity: 0.4
+
++media(md)
+	.footer-menu
+		&__footer-link
+			display: none
+
+.footer-menu-dop
+	&__list
+		display: flex
+		margin: 0 -10px
+		padding: 0
+		list-style: none
+	&__item
+		+b4col(50%)
+		padding: 0 10px
+	&__link
+		font-size: 13px
+		line-height: 18px
+		color: #ffffff !important

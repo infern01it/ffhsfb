@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>youtube</title>
-    <desc>Created with Sketch.</desc>
     <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Apple-TV" transform="translate(-196.000000, -330.000000)" fill="#000000" fill-rule="nonzero">
             <path d="M210.953846,330 L199.046154,330 C197.36381,330 196,331.313298 196,332.933333 L196,339.066667 C196,340.686702 197.36381,342 199.046154,342 L210.953846,342 C212.63619,342 214,340.686702 214,339.066667 L214,332.933333 C214,331.313298 212.63619,330 210.953846,330 Z M205.692308,337.333333 L202.923077,338.666667 L202.923077,333.333333 L205.692308,334.666667 L208.461538,336 L205.692308,337.333333 Z" id="youtube"></path>
