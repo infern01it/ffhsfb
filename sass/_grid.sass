@@ -6,52 +6,70 @@ $lgBp: 1000px
 $mdBp: 768px
 $smBp: 375px
 
-$lgGutter: 30px
-$mdGutter: 20px
-$smGutter: 10px
-
 .container
 	width: 100%
 	max-width: 1320px
+	margin: 0 auto
 
 .row
 	display: flex
 	flex-wrap: wrap
 
-@media ( min-width: $smBp )
-	.offset-0
-		margin-left: 0
+// SM версия
+.container
+	padding-right: ($smGutter / 2)
+	padding-left: ($smGutter / 2)
 
-	%grid-column-sm
-		position: relative
-		width: 100%
-		min-height: 1px
-		padding-right: ($smGutter / 2)
-		padding-left: ($smGutter / 2)
+.row
+	margin-right: -($smGutter / 2)
+	margin-left: -($smGutter / 2)
 
-	@for $i from 1 through $smCols
-		$w: 100% / $smCols * $i
+.offset-0
+	margin-left: 0
 
-		.col-#{$i}
-			@extend %grid-column-sm !optional
+%grid-column-sm
+	position: relative
+	width: 100%
+	min-height: 1px
+	padding-right: ($smGutter / 2)
+	padding-left: ($smGutter / 2)
 
-		.col-#{$i}
-			max-width: $w
-			flex: 0 0 $w
+@for $i from 1 through $smCols
+	$w: 100% / $smCols * $i
 
-		.offset-#{$i}
-			margin-left: $w
+	.col-#{$i}
+		@extend %grid-column-sm !optional
 
+	.col-#{$i}
+		max-width: $w
+		flex: 0 0 $w
+
+	.offset-#{$i}
+		margin-left: $w
+
+@for $i from 1 through 10
+	.order-#{$i}
+		order: $i
+
+// MD версия
 @media ( min-width: $mdBp )
+	.container
+		padding-right: ($mdGutter / 2)
+		padding-left: ($mdGutter / 2)
+
+	.row
+		margin-right: -($mdGutter / 2)
+		margin-left: -($mdGutter / 2)
+
 	.offset-md-0
 		margin-left: 0
 
-	%grid-column-sm
+	%grid-column-md
 		position: relative
 		width: 100%
 		min-height: 1px
-		padding-right: ($smGutter / 2)
-		padding-left: ($smGutter / 2)
+		padding-right: ($mdGutter / 2)
+		padding-left: ($mdGutter / 2)
 
 	@for $i from 1 through $mdCols
 		$w: 100% / $mdCols * $i
@@ -66,16 +84,28 @@ $smGutter: 10px
 		.offset-md-#{$i}
 			margin-left: $w
 
+	@for $i from 1 through 10
+		.order-md-#{$i}
+			order: $i
+
 @media ( min-width: $lgBp )
+	.container
+		padding-right: ($lgGutter / 2)
+		padding-left: ($lgGutter / 2)
+
+	.row
+		margin-right: -($lgGutter / 2)
+		margin-left: -($lgGutter / 2)
+
 	.offset-lg-0
 		margin-left: 0
 
-	%grid-column-sm
+	%grid-column-lg
 		position: relative
 		width: 100%
 		min-height: 1px
-		padding-right: ($smGutter / 2)
-		padding-left: ($smGutter / 2)
+		padding-right: ($lgGutter / 2)
+		padding-left: ($lgGutter / 2)
 
 	@for $i from 1 through $lgCols
 		$w: 100% / $lgCols * $i
@@ -89,3 +119,7 @@ $smGutter: 10px
 
 		.offset-lg-#{$i}
 			margin-left: $w
+
+	@for $i from 1 through 10
+		.order-lg-#{$i}
+			order: $i

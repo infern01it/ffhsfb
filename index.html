@@ -26,28 +26,743 @@
 <!--	<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
 	
 	<link rel="stylesheet" href="css/reboot.css">
-<!--	<link rel="stylesheet" href="css/libs/slick.css">-->
-<!--	<link rel="stylesheet" href="css/libs/slick-theme.css">-->
+	<link rel="stylesheet" href="css/libs/slick.css">
+	<link rel="stylesheet" href="css/libs/slick-theme.css">
 	<link rel="stylesheet" href="css/main.css">
 	
 	<script src="js/libs/jquery-3.2.1.min.js"></script>
-	<script src="js/libs/jquery.smoothscroll.js"></script>
+	<!-- <script src="js/libs/jquery.smoothscroll.js"></script> -->
+	<script src="js/libs/slick.min.js"></script>
 	<script src="js/libs/jquery.switchPopup.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/p-home.js"></script>
 </head>
 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 article">
-				<div class="article__head head">
-					<img class="head__logo" src="http://grechka.digital/img/favicon/favicon.png">
-					<h1 class="head__title">Старт нового проекта</h1>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="header__left">
+					<a href="#" class="header__logo logo">
+						<img src="img/logo.svg" class="img-svg">
+					</a>
 				</div>
-				<p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Буквенных лучше реторический заголовок что семь. Маленький, коварных необходимыми свою предложения курсивных ее если своих рыбного безорфографичный переписали вдали это!</p>
-				<p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Буквенных лучше реторический заголовок что семь.</p>
+				<div class="header__right">
+					<div class="header__menu">
+						<menu class="header-menu">
+							<nav class="header-menu__nav header-menu__nav_1 navigation-blocks">
+								<ul class="navigation-blocks__list">
+									<li class="navigation-blocks__item is-parent active">
+										<a href="#" class="navigation-blocks__link">Решения</a>
+										<div class="navigation-blocks__submenu submenu-block submenu-block_el_1x4">
+											<ul class="submenu-block__list">
+												<li class="submenu-block__item active">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/store-online.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">Store online</h3>
+														<span class="icon-menu__desc sm-text">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/salepoint.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">SAle point</h3>
+														<span class="icon-menu__desc sm-text">Мобильная касса</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">DPS</h3>
+														<span class="icon-menu__desc sm-text">Решение для банков</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps-m.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">DPS.MOBILE</h3>
+														<span class="icon-menu__desc sm-text">Встраиваемое решение</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-blocks__item is-parent">
+										<a href="#" class="navigation-blocks__link">Оборудование</a>
+										<div class="navigation-blocks__submenu submenu-block submenu-block_el_2x3">
+											<ul class="submenu-block__list">
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/chehli.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Чехлы со сканером ШК для Apple</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/terminal-sbora.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Терминалы сбора данных</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/scanner.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Сканеры ШК</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/pl-terminal.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Платежные терминалы</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/printer.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Принтеры чеков и этикеток</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/kassa.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Контрольно-кассовая техника</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-blocks__item is-parent">
+										<a href="#" class="navigation-blocks__link">Отрасли</a>
+										<div class="navigation-blocks__submenu submenu-block submenu-block_el_1x4">
+											<ul class="submenu-block__list">
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/store-online.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/salepoint.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps-m.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+								</ul>
+							</nav>
+	
+							<nav class="header-menu__nav header-menu__nav_2 navigation-list">
+								<ul class="navigation-list__list">
+									<li class="navigation-list__item is-parent">
+										<a href="#" class="navigation-list__link">Компания</a>
+										<div class="navigation-list__submenu submenu-list">
+											<ul class="submenu-list__list">
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">О компании</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Проекты</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Партнеры</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Вакансии</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Реквизиты</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-list__item">
+										<a href="#" class="navigation-list__link">Пресс-центр</a>
+									</li>
+									<li class="navigation-list__item is-parent">
+										<a href="#" class="navigation-list__link">Поддержка</a>
+										<div class="navigation-list__submenu submenu-list">
+											<ul class="submenu-list__list">
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">ПО и документация</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Связаться с техподдержкой</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Сервисное обслуживание оборудования</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-list__item">
+										<a href="#" class="navigation-list__link">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+
+							<div class="header-menu__search-form header-search">
+								<div class="header-search__row">
+									<div class="header-search__btn-wrap">
+										<button class="header-search__btn">
+											<img src="img/search.svg" class="img-svg">
+										</button>
+									</div>
+									<form class="header-search__field">
+										<input type="search" class="header-search__input" placeholder="Поиск на dataphone.su…">
+									</form>
+									<div class="header-search__recomended search-recomended">
+										<span class="search-recomended__title sm-text">Рекомендации</span>
+										<ul class="search-recomended__list">
+											<li class="search-recomended__item">
+												<button type="button" class="search-recomended__btn">Сканеры штрих-кодов</button>
+											</li>
+											<li class="search-recomended__item">
+												<button type="button" class="search-recomended__btn">Платежные терминалы</button>
+											</li>
+											<li class="search-recomended__item">
+												<button type="button" class="search-recomended__btn">Мобильная касса</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+	
+							<div class="header-menu__search-tgl-btn">
+								<button class="header-search-tgl-btn close">
+									<img src="img/search.svg" class="header-search-tgl-btn__search img-svg">
+									<img src="img/close-in.svg" class="header-search-tgl-btn__close img-svg">
+								</button>
+							</div>
+						</menu>
+					</div>
+
+					<div class="header__burger">
+						<button class="header-burger close js-tgl-menu">
+							<span class="header-burger__icon">
+								<span></span>
+							</span>
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</header>
+
+	<main class="main p-home">
+		<section class="p-home__main-slider home-slider">
+			<div class="container">
+				<div class="home-slider__loader">
+					<div class="home-slider__loader-line" style="width: 0%"></div>
+				</div>
+				<div class="home-slider__slick">
+					<div class="home-slider__item home-slider-item">
+						<div class="home-slider-item__bg">
+							<img src="content/home-slider/banner-1.png" class="home-slider-item__img">
+						</div>
+						<div class="home-slider-item__content">
+							<div class="home-slider-item__row row">
+								<div class="home-slider-item__col col-6 col-md-2 offset-md-2 col-lg-4 offset-lg-2">
+									<h1 class="home-slider-item__title h1">Наше превосходство в мобильности</h1>
+				
+									<div class="home-slider-item__desc b-content">
+										<p>Мобильные решения для бизнеса</p>
+									</div>
+									
+									<div class="home-slider-item__btn">
+										<button class="btn">О компании</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="home-slider__item home-slider-item">
+						<div class="home-slider-item__bg">
+							<img src="content/home-slider/banner-2.jpg" class="home-slider-item__img">
+						</div>
+						<div class="home-slider-item__content">
+							<div class="home-slider-item__row row">
+								<div class="home-slider-item__col col-6 col-md-2 offset-md-2 col-lg-4 offset-lg-2">
+									<h1 class="home-slider-item__title h1">Наше превосходство в мобильности</h1>
+				
+									<div class="home-slider-item__desc b-content">
+										<p>Мобильные решения для бизнеса</p>
+									</div>
+									
+									<div class="home-slider-item__btn">
+										<button class="btn">О компании</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="home-slider__item home-slider-item">
+						<div class="home-slider-item__bg">
+							<img src="content/home-slider/banner-3.jpg" class="home-slider-item__img">
+						</div>
+						<div class="home-slider-item__content">
+							<div class="home-slider-item__row row">
+								<div class="home-slider-item__col col-6 col-md-2 offset-md-2 col-lg-4 offset-lg-2">
+									<h1 class="home-slider-item__title h1">Наше превосходство в мобильности</h1>
+				
+									<div class="home-slider-item__desc b-content">
+										<p>Мобильные решения для бизнеса</p>
+									</div>
+									
+									<div class="home-slider-item__btn">
+										<button class="btn">О компании</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(function() {
+						window.mainSlider({
+							autoplay: true,
+							autoplaySpeed: 5000
+						});
+					});
+				</script>
+			</div>
+		</section>
+
+		<section class="p-home__news home-news home-sect">
+			<div class="container">
+				<div class="row">
+					<div class="order-1 order-lg-1 col-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Новости компании</h3>
+						</div>
+					</div>
+					<div class="order-3 order-lg-2 col-6 col-lg-2">
+						<div class="home-sect__more">
+							<a href="#" class="more-link">
+								<span class="more-link__text">Все новости</span>
+								<img src="img/arrow-more.svg" class="more-link__arrow img-svg">
+							</a>
+						</div>
+					</div>
+					<div class="order-2 order-lg-3 col-6 col-lg-8">
+						<div class="row">
+							<div class="home-news__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-news__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+									<div class="b-new__img-wrap">
+										<img src="content/home-news/news-img.png" class="b-new__img">
+									</div>
+									<div class="b-new__content">
+										<h4 class="b-new__title h4">Dataphone проводит новую акцию посвященную запуску нового сайта</h4>
+										<span class="b-new__date sm-text">12.01.2019 / Новости</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-news__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-news__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+									<div class="b-new__content">
+										<h4 class="b-new__title h4">Подводим итоги года вместе с вами</h4>
+										<span class="b-new__date sm-text">09.01.2019 / Проекты</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-news__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-news__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+									<div class="b-new__img-wrap">
+										<img src="content/home-news/news-img.png" class="b-new__img">
+									</div>
+									<div class="b-new__content">
+										<h4 class="b-new__title h4">Плодотворное сотрудничество с брендом ZARA</h4>
+										<span class="b-new__date sm-text">06.01.2019 / Статьи</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-news__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-news__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+									<div class="b-new__img-wrap">
+										<img src="content/home-news/news-img.png" class="b-new__img">
+									</div>
+									<div class="b-new__content">
+										<h4 class="b-new__title h4">Обувной бум </h4>
+										<span class="b-new__date sm-text">28.12.2018 / Новости</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-home__next-events home-next-events home-sect">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Предстоящие события</h3>
+						</div>
+					</div>
+
+					<div class="col-6 col-lg-8">
+						<div class="home-next-events__list">
+							<div class="home-next-events__item">
+								<div class="b-next-event">
+									<div class="row">
+										<div class="col-6 col-md-2 col-lg-3">
+											<a href="#" class="b-next-event__img-wrap">
+												<img src="content/home-events/news-inner-banner-small.png" class="b-next-event__img">
+											</a>
+										</div>
+										<div class="col-6 col-md-4 col-lg-5">
+											<div class="b-next-event__right">
+												<a href="#" class="b-next-event__title-wrap">
+													<h4 class="b-next-event__title h2">Выставка Moscow Expo 19 встречаемся у стенда DATAPHONE</h4>
+												</a>
+												<span class="b-next-event__desc sm-text">12 Марта 2019 / Выстачочный центр SOHO ROOMS</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="home-next-events__item">
+								<div class="b-next-event">
+									<div class="row">
+										<div class="col-6 col-md-2 col-lg-3">
+											<a href="#" class="b-next-event__img-wrap">
+												<img src="content/home-events/news-inner-banner-small.png" class="b-next-event__img">
+											</a>
+										</div>
+										<div class="col-6 col-md-4 col-lg-5">
+											<div class="b-next-event__right">
+												<a href="#" class="b-next-event__title-wrap">
+													<h4 class="b-next-event__title h2">a. МИлан. Выставка мобильных технологий</h4>
+												</a>
+												<span class="b-next-event__desc sm-text">4 Апреля 2019 / Милан, Аугуста Инье авеню 45 / 7</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="home-next-events__item">
+								<div class="b-next-event">
+									<div class="row">
+										<div class="col-6 col-md-2 col-lg-3">
+											<a href="#" class="b-next-event__img-wrap">
+												<img src="content/home-events/news-inner-banner-small.png" class="b-next-event__img">
+											</a>
+										</div>
+										<div class="col-6 col-md-4 col-lg-5">
+											<div class="b-next-event__right">
+												<a href="#" class="b-next-event__title-wrap">
+													<h4 class="b-next-event__title h2">100+ Awards выставка в Москве. Приглашаем всех к стойке DATAPHONE</h4>
+												</a>
+												<span class="b-next-event__desc sm-text">8 Апреля 2019 / Выстачочный центр SOHO ROOMS</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-home__next-events home-industry home-sect home-sect_dark home-sect_pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">наши отрасли</h3>
+						</div>
+					</div>
+					<div class="col-6 col-lg-8">
+						<div class="row">
+							<div class="home-industry__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_dark b-styled_color_gray">
+									<div class="b-industry__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<h3 class="b-industry__title h3">Ритейл</h3>
+								</a>
+							</div>
+							<div class="home-industry__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_dark b-styled_color_gray">
+									<div class="b-industry__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<h3 class="b-industry__title h3">Банки. финтех</h3>
+								</a>
+							</div>
+							<div class="home-industry__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_dark b-styled_color_gray">
+									<div class="b-industry__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<h3 class="b-industry__title h3">Вендинг. Терминалы самообслуживания</h3>
+								</a>
+							</div>
+							<div class="home-industry__col col-6 col-md-3 col-lg-2">
+								<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_dark b-styled_color_gray">
+									<div class="b-industry__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<h3 class="b-industry__title h3">транспорт</h3>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-home__customers home-customers home-sect home-sect_pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Наши заказчики</h3>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3">
+						<div class="home-customers__left">
+							<div class="home-customers__desc b-content">
+								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
+							</div>
+							<a href="#" class="home-customers__btn btn">Стать клиентом</a>
+						</div>
+					</div>
+					<div class="col-6 offset-lg-1 col-lg-4">
+						<div class="home-customers__logo-list">
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-home__solutions home-solutions home-sect home-sect_pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Наши решения</h3>
+						</div>
+					</div>
+					<div class="col-6 col-lg-8">
+						<div class="row">
+							<div class="home-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="home-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="home-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="home-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="home-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-home__projects home-projects home-sect home-sect_pb">
+			<div class="container">
+				<div class="row">
+					<div class="order-1 order-lg-1 col-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">наши проекты</h3>
+						</div>
+					</div>
+					<div class="order-3 order-lg-2 col-6 col-lg-2">
+						<div class="home-sect__more">
+							<a href="#" class="more-link">
+								<span class="more-link__text">Все проекты</span>
+								<img src="img/arrow-more.svg" class="more-link__arrow img-svg">
+							</a>
+						</div>
+					</div>
+					<div class="order-2 order-lg-3 col-6 col-lg-8">
+						<div class="row">
+							<div class="home-projects__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="home-projects__card b-project b-styled b-styled_bg_white b-styled_color_gray">
+									<div class="b-project__img-wrap">
+										<img src="content/home-project/project-img.png" class="b-project__img">
+									</div>
+									<div class="b-project__content">
+										<h4 class="b-project__title h4">Сотрудничество с Amazon</h4>
+										<div class="b-project__desc b-content">
+											<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток…</p>
+										</div>
+										<span class="b-project__date sm-text">12.01.2019 / Новости</span>
+									</div>
+								</a>
+							</div>
+							<div class="home-projects__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="home-projects__card b-project b-styled b-styled_bg_white b-styled_color_gray">
+									<div class="b-project__img-wrap">
+										<img src="content/home-project/project-img-2.png" class="b-project__img">
+									</div>
+									<div class="b-project__content">
+										<h4 class="b-project__title h4">Сотрудничество с Amazon</h4>
+										<div class="b-project__desc b-content">
+											<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток…</p>
+										</div>
+										<span class="b-project__date sm-text">12.01.2019 / Новости</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
