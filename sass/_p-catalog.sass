@@ -144,14 +144,50 @@
 			text-align: left
 			margin: 0 0 22px
 
+/* --- Страница товара --- */
++media(md)
+	.p-catalog-product
+		&__main,
+		&__accordion,
+		&__solutions,
+		&__tabs,
+		&__accessories
+			padding-left: 10px
+			padding-right: 10px
+
++media(sm)
+	.p-catalog-product
+		&__main,
+		&__accordion,
+		&__solutions,
+		&__tabs,
+		&__accessories
+			padding-left: 15px
+			padding-right: 15px
+
+// Первая секиция со слайдером превьюх и описанием
 .sect-catalog-product-main
-	padding: 10px 0 0
+	padding-top: 10px
+	padding-bottom: 62px
 	&__back
 		margin: 0 0 20px
 	&__big-slider
 		margin: 0 0 20px
+		padding-right: 20px
 	&__small-slider
+		padding-right: 20px
 
++media(md)
+	.sect-catalog-product-main
+		padding-top: 10px
+		padding-bottom: 41px
+		&__big-slider
+			margin: 0 0 10px
+			padding-right: 0
+		&__small-slider
+			margin-bottom: 52px
+
+// Большой слайдер
 .product-priview-slider-big
 	$padding: 80px
 	background-color: #f8f7f7
@@ -159,6 +195,7 @@
 	&__item
 		position: relative
 		padding: $padding
+		cursor: url('#{$url-img}/cursor.jpg'), pointer
 		+aspect-ratio(1)
 	&__img
 		position: absolute
@@ -169,7 +206,7 @@
 		object-fit: contain
 		object-position: 50% 50%
 
-		
+// Мелкий слайдер
 .product-priview-slider-small
 	$padding: 20px
 	&__slick
@@ -193,3 +230,359 @@
 		object-fit: contain
 		object-position: 50% 50%
 
++media(md)
+	.product-priview-slider-small
+		$padding: 12px
+		&__item
+			width: 70px
+			height: 70px
+			padding: $padding
+			margin-right: $padding
+		&__img
+			top: $padding
+			left: $padding
+			width: calc(100% - #{$padding * 2})
+			height: calc(100% - #{$padding * 2})
+
+// Попап со слайдером
+.product-popup
+	position: fixed
+	z-index: 120
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #ffffff
+	display: none
+	opacity: 0
+	transition: all .2s ease-out
+	&.display
+		display: block
+	&.visible
+		opacity: 1
+	&__wrap
+		position: relative
+		height: 100%
+		display: flex
+		align-items: center
+	&__close
+		position: absolute
+		z-index: 2
+		top: 24px
+		right: 60px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		padding: 0
+		border: 1px solid rgba(#000, .2)
+		outline: none !important
+		border-radius: 50%
+		background-color: transparent
+		cursor: pointer
+	&__slider
+		width: 100%
+
+.slider-popup
+	position: relative
+	&__slick
+	&__item
+		position: relative
+		width: 960px
+		margin-left: 15px
+		margin-right: 15px
+		padding: 117px 80px 108px
+		background-color: #f8f7f7
+		+aspect-ratio(96, 68)
+	&__img
+		position: absolute
+		top: 117px
+		left: 80px
+		width: calc(100% - 160px)
+		height: calc(100% - 225px)
+		object-fit: contain
+		object-position: 50% 50%
+	&__arrow
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 70px
+		height: 70px
+		padding: 0
+		border: none
+		outline: none !important
+		background-color: $ac
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -35px
+		transform-origin: 50% 50%
+		cursor: pointer
+		&::before
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border-top: 7px solid transparent
+			border-bottom: 7px solid transparent
+			border-right: 10px solid #fff
+			transform-origin: center
+		&_left
+			transform: translate(-493px, -50%)
+		&_right
+			transform: translate(493px, -50%)
+			&::before
+				transform: rotate(-180deg)
+
+// Описание товара
+.product-preview-info
+	&__title
+		margin: 0 0 30px
+	&__subtitle
+		display: block
+		margin: 0 0 55px
+	&__buttons
+		margin: 0 0 75px
+		display: flex
+		flex-wrap: wrap
+	&__desc
+
++media(md)
+	.product-preview-info
+		&__title
+			margin: 0 0 12px
+			text-align: center
+			text-transform: uppercase
+		&__subtitle
+			margin: 0 0 34px
+			text-align: center
+		&__send,
+		&__download
+			width: 100%
+		&__send
+			margin-bottom: 10px
+		&__buttons
+			margin: 0 0 35px
+
+// Секция с аккордионом
+.sect-catalog-product-accordion
+
+// Аккордион
+.product-accordion
+	$p: &
+	&__item
+		border-top: 1px solid rgba(#292929, .1)
+		&:last-child
+			border-bottom: 1px solid rgba(#292929, .1)
+		&.active
+			#{$p}__btn .vertical
+				transform: rotate(-90deg)
+				opacity: 0
+	&__head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 50px 0 45px
+	&__title
+		margin: 0
+		text-transform: uppercase
+		cursor: pointer
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 30px
+		height: 30px
+		background-color: transparent
+		border: none
+		margin-right: -8px
+		padding: 0
+		outline: none !important
+		cursor: pointer
+		.vertical
+			transform-origin: 50% 50%
+			transition: all .2s ease-out
+	&__body
+		padding: 0 0 60px
+
++media(md)
+	.product-accordion
+		&__head
+			padding: 26px 0
+
+// Характеристики продуктов
+.product-specifications
+	&__grid
+		width: 100%
+		display: grid
+		grid-gap: 10px
+		grid-template-columns: repeat(auto-fill, minmax(250px,1fr))
+		grid-auto-rows: 10px
+		grid-auto-flow: dense
+	&__content
+		h4
+			text-transform: uppercase
+			margin: 0 0 22px
+		h5
+			margin: 0 0 22px
+			padding-left: 12px
+		ul, ol
+			margin: 0 0 28px
+		*:last-child
+			margin: 0
+
+// Конфигурации продуктов
+.product-configurations
+	&__row
+		margin-bottom: 22px
+		&:last-child
+			margin-bottom: 0
+	&__title-col
+	&__title-cell
+		display: none
+	&__name
+		margin: 0
+	&__desc
+	&__props
+
++media(md)
+	.product-configurations
+		display: flex
+		flex-wrap: wrap
+		margin-left: -10px
+		margin-right: -10px
+		&__row
+			+b4col(50%)
+			margin-left: 0
+			margin-right: 0
+			&_first
+				display: none
+		&__title-cell
+			display: block
+		&__name,
+		&__desc
+			margin: 0 0 30px
+
++media(sm)
+	.product-configurations
+		margin-left: -5px
+		margin-right: -5px
+		&__row
+			+b4col(100%)
+
+// Секция "Применяется в решениях"
+.sect-catalog-product-solutions
+	&__col
+		margin-bottom: 30px
+		&:nth-last-child(1),
+		&:nth-last-child(2):not(:nth-child(even))
+			margin-bottom: 0
+	&__card
+		height: 100%
+
+// Табы
+.product-tabs
+	$p: &
+	&__head
+		display: flex
+		justify-content: space-around
+		align-items: center
+	&__body
+		padding: 67px 0 56px
+		border-top: 1px solid rgba(#292929, .1)
+		border-bottom: 1px solid rgba(#292929, .1)
+	&__btn
+		padding: 0
+		background-color: transparent
+		border: none !important
+		outline: none !important
+		font-size: 14px
+		white-space: nowrap
+		color: #1a1a1a
+		cursor: pointer
+	&__h-item
+		position: relative
+		padding: 0 43px 37px
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 2px
+			position: absolute
+			bottom: 0
+			left: 0
+		&.active
+			&::after
+				background-color: $ac
+			#{$p}__btn
+				color: $ac
+	&__b-item
+		display: none
+		&.active
+			display: block
+
++media(md)
+	.product-tabs
+		&__h-item
+			padding: 0 40px 16px
+		&__body
+			padding: 44px 0 34px
+
++media(sm)
+	.product-tabs
+		&__head
+			justify-content: flex-start
+			overflow-x: scroll
+		&__h-item
+			padding: 0 0 16px
+			margin-right: 28px
+			&:last-child
+				margin-right: 0
+
+// Инструкции
+.product-instructions-list
+	margin: 0
+	padding: 0
+	list-style: none
+	&__item
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin-bottom: 36px
+		&:last-child
+			margin-bottom: 0
+	&__icon
+		margin-right: 19px
+	&__link
+		font-size: 14px
+		line-height: 22px
+		color: #1a1a1a !important
+
+// Секция "Доступные аксессуары"
+.sect-catalog-product-accessories
+	&__col
+		+b4col(25%)
+		margin-bottom: 30px
+		padding-left: 15px
+		padding-right: 15px
+		&:nth-last-child(1),
+		&:nth-last-child(2):not(:nth-child(even))
+			margin-bottom: 0
+	&__card
+
++media(md)
+	.sect-catalog-product-accessories
+		&__col
+			+b4col(33.3333%)
+			margin-bottom: 20px
+			padding-left: 10px
+			padding-right: 10px
+
++media(sm)
+	.sect-catalog-product-accessories
+		&__col
+			+b4col(50%)
+			margin-bottom: 10px
+			padding-left: 5px
+			padding-right: 5px

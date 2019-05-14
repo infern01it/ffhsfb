@@ -60,6 +60,11 @@ h4, .h4
 	font-weight: 500
 	line-height: 22px
 
+h5, .h5
+	font-size: 14px
+	font-weight: 500
+	line-height: 12px
+
 // Мелкий текст
 .sm-text
 	font-size: 11px
@@ -74,6 +79,7 @@ a.sm-text
 
 // Кнопки
 .btn
+	position: relative
 	display: inline-block
 	padding: 0
 	min-width: 300px
@@ -104,8 +110,11 @@ a.sm-text
 			background-color: #ffffff
 			color: #1a1a1a !important
 	&_icon_left
+		display: inline-flex
+		justify-content: center
+		align-items: center
 		img, svg
-			margin-right: 19px
+			margin-right: 20px
 
 // Ссылка "подробнее" со стрелкой
 .more-link
@@ -130,6 +139,22 @@ a.sm-text
 .b-content
 	> *:last-child
 		margin: 0
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+		li
+			position: relative
+			padding-left: 12px
+		li::before
+			content: ''
+			position: absolute
+			top: 9px
+			left: 0
+			width: 4px
+			height: 4px
+			background-color: rgba(#000, .2)
+			border-radius: 1px
 
 // Стилизованная карточка с загнутым углом
 .b-styled
