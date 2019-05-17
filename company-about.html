@@ -3,7 +3,7 @@
 <head>
 		<meta charset="utf-8">
 	
-		<title>Каталог - Раздел</title>
+		<title>Компания - О компании</title>
 		<meta name="description" content="">
 	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,11 +17,15 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 		
 		<link rel="stylesheet" href="css/reboot.css">
+		<link rel="stylesheet" href="css/libs/slick.css">
+		<link rel="stylesheet" href="css/libs/slick-theme.css">
 		<link rel="stylesheet" href="css/main.css">
 		
 		<script src="js/libs/jquery-3.2.1.min.js"></script>
+		<script src="js/libs/slick.min.js"></script>
 		<script src="js/libs/jquery.switchPopup.js"></script>
 		<script src="js/common.js"></script>
+		<script src="js/b-slider-popup.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -279,159 +283,274 @@
 		</div>
 	</header>
 	
-	<main class="main p-catalog-category">
-		<section class="p-catalog-category__head sect-head">
+	<main class="main p-company-about">
+		<section class="p-company-about__head sect-head">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
 						<div class="sect-head__title-wrap">
-							<h1 class="sect-head__title h1">чехлы со сканером ШК для Apple</h1>
+							<h1 class="sect-head__title h1">О компании</h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-catalog-category__category sect-catalog-category-product">
+		<section class="p-company-about__desc sect-company-about-desc">
 			<div class="container">
 				<div class="row">
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-4.png" class="b-product__img">
+					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
+						<div class="sect-company-about-desc__content b-content">
+							<p>С помощью оборудования Linea Pro с опцией чтения RFID – меток осуществляется сканирование товарной единицы, а антенны определяют местоположение товара в режиме реального времени. Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром и его перемещением. В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин».</p>
+							<p>Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром. В основе представленного решения лежит система отслеживания товара, которая позволяет видеть товар на каждом этапе в цепочке.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-company-about__competencies home-sect home-sect_pb sect-company-about-competencies">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Наши компетенции</h3>
+						</div>
+					</div>
+				</div>
+				<div class="sect-company-about-competencies__row row">
+					<div class="sect-company-about-competencies__col">
+						<a href="#" class="sect-company-about-competencies__card b-competencie">
+							<div class="b-competencie__icon">
+								<div class="b-border-icon b-border-icon_gray">
+									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+									<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+								</div>
 							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
+							<span class="b-competencie__title">Анализ процессов</span>
 						</a>
 					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-2.png" class="b-product__img">
+					<div class="sect-company-about-competencies__col">
+						<a href="#" class="sect-company-about-competencies__card b-competencie">
+							<div class="b-competencie__icon">
+								<div class="b-border-icon b-border-icon_gray">
+									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+									<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+								</div>
 							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
+							<span class="b-competencie__title">Анализ процессов</span>
 						</a>
 					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-1.png" class="b-product__img">
+					<div class="sect-company-about-competencies__col">
+						<a href="#" class="sect-company-about-competencies__card b-competencie">
+							<div class="b-competencie__icon">
+								<div class="b-border-icon b-border-icon_gray">
+									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+									<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+								</div>
 							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Считыватель магнитной полосы и чип-карт DRD-10</h5>
-								<span class="b-product__subtitle sm-text">Считыватели магнитной полосы</span>
-							</div>
+							<span class="b-competencie__title">Анализ процессов</span>
 						</a>
 					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-4.png" class="b-product__img">
+					<div class="sect-company-about-competencies__col">
+						<a href="#" class="sect-company-about-competencies__card b-competencie">
+							<div class="b-competencie__icon">
+								<div class="b-border-icon b-border-icon_gray">
+									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+									<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+								</div>
 							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
+							<span class="b-competencie__title">Анализ процессов</span>
 						</a>
 					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-2.png" class="b-product__img">
+					<div class="sect-company-about-competencies__col">
+						<a href="#" class="sect-company-about-competencies__card b-competencie">
+							<div class="b-competencie__icon">
+								<div class="b-border-icon b-border-icon_gray">
+									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+									<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+								</div>
 							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-1.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Считыватель магнитной полосы и чип-карт DRD-10</h5>
-								<span class="b-product__subtitle sm-text">Считыватели магнитной полосы</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-4.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-2.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-1.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Считыватель магнитной полосы и чип-карт DRD-10</h5>
-								<span class="b-product__subtitle sm-text">Считыватели магнитной полосы</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-4.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-2.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="sect-catalog-category-product__col">
-						<a href="#" class="sect-catalog-category-product__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-1.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Считыватель магнитной полосы и чип-карт DRD-10</h5>
-								<span class="b-product__subtitle sm-text">Считыватели магнитной полосы</span>
-							</div>
+							<span class="b-competencie__title">Анализ процессов</span>
 						</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-catalog-category__next sect-next">
+		<section class="p-company-about__solutions home-sect home-sect_pb sect-company-about-solutions">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Наши решения</h3>
+						</div>
+					</div>
+					<div class="col-6 col-lg-8">
+						<div class="row">
+							<div class="sect-company-about-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="sect-company-about-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+							<div class="sect-company-about-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="sect-company-about-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+							<div class="sect-company-about-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="sect-company-about-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+							<div class="sect-company-about-solutions__col col-6 col-md-3 col-lg-4">
+								<a href="#" class="sect-company-about-solutions__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
+									<span class="b-solution__label sm-text">Ритейл / Банки</span>
+									<div class="b-solution__icon">
+										<div class="b-border-icon">
+											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
+											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
+										</div>
+									</div>
+									<div class="b-solution__bottom">
+										<h3 class="b-solution__title h3">Банки. финтех</h3>
+										<span class="b-solution__desc">Мобильный учет товаров</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-company-about__photo home-sect sect-company-about-photo">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">О нас в фотографиях</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sect-company-about-photo__slider slider-popup">
+				<div class="slider-popup__slick">
+					<div class="slider-popup__item">
+						<img src="/content/slider/img-1.png" class="slider-popup__img slider-popup__img_full">
+					</div>
+					<div class="slider-popup__item">
+						<img src="/content/slider/img-2.png" class="slider-popup__img slider-popup__img_full">
+					</div>
+					<div class="slider-popup__item">
+						<img src="/content/slider/img-3.png" class="slider-popup__img slider-popup__img_full">
+					</div>
+				</div>
+				<button class="slider-popup__arrow slider-popup__arrow_left"></button>
+				<button class="slider-popup__arrow slider-popup__arrow_right"></button>
+			</div>
+			<script>
+				$(function() {
+					window.initSliderPopup('slider-popup');
+				});
+			</script>
+		</section>
+
+		<section class="p-company-about__customers home-customers home-sect home-sect_pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="home-sect__title-wrap">
+							<h3 class="home-sect__title h3">Наши заказчики</h3>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3">
+						<div class="home-customers__left">
+							<div class="home-customers__desc b-content">
+								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
+							</div>
+							<a href="#" class="home-customers__btn btn">Стать клиентом</a>
+						</div>
+					</div>
+					<div class="col-6 offset-lg-1 col-lg-4">
+						<div class="home-customers__logo-list">
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+							<div class="home-customers__logo-item">
+								<a href="#" class="b-customer-logo">
+									<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg" >
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-company-about__next sect-next">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-2 offset-lg-2">
@@ -449,9 +568,8 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
-	
+
 	<footer class="footer">
 		<div class="footer__top">
 			<div class="container">
