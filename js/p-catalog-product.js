@@ -62,48 +62,7 @@ $(function() {
 		btnClass: 'js-tgl-product-popup'
 	});
 
-	var classNamePopup = 'slider-popup';
-	var sliderPopup = $('.'+classNamePopup+'__slick');
-	var sliderPopupItem = $('.'+classNamePopup+'__item');
-	var sliderPopupPrev = $('.'+classNamePopup+'__arrow_left');
-	var sliderPopupNext = $('.'+classNamePopup+'__arrow_right');
-
-	if( sliderPopup.length ) {
-		sliderPopup.slick({
-			lazyLoad: 'ondemand',
-			slidesToShow: 2,
-			slidesToScroll: 1,
-			dots: false,
-			arrows: false,
-			speed: 500,
-			cssEase: 'linear',
-			centerMode: true,
-			variableWidth: true,
-			infinite: false
-		});
-	}
-
-	if(sliderPopup.length && sliderPopupPrev.length) {
-		sliderPopupPrev.on('click', function() {
-			sliderPopup.slick('slickPrev');
-		});
-	}
-
-	if(sliderPopup.length && sliderPopupNext.length) {
-		sliderPopupNext.on('click', function() {
-			sliderPopup.slick('slickNext');
-		});
-	}
-
-	updateSliderArrows();
-	sliderPopup.on('afterChange', function() {
-		updateSliderArrows();
-	});
-
-	function updateSliderArrows() {
-		if(sliderPopup.length && sliderPopupPrev.length) sliderPopupPrev.css('display', sliderPopupItem.first().hasClass('slick-current') ? 'none' : 'flex');
-		if(sliderPopup.length && sliderPopupNext.length) sliderPopupNext.css('display', sliderPopupItem.last().hasClass('slick-current') ? 'none' : 'flex');
-	}
+	var sliderPopup = window.initSliderPopup('slider-popup');
 	
 	// Масонри на гридах
 	function resizeGridItem($item){
