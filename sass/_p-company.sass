@@ -130,3 +130,38 @@
 		padding: 20px 20px 38px
 		&__logo
 			margin: 0 auto 18px
+
+// Страница: Компания - Вакансии
+// Блок "Вакансия"
++media(sm)
+	.b-vacancy
+		&__props
+			margin: 0 0 30px
+
+// Блок свайств вакансии
+.b-vacancy-props
+	&__row
+		margin-bottom: 44px
+		&:last-child
+			margin-bottom: 0
+		&:nth-last-child(2)
+			margin-bottom: 97px
+	&__col
+		&:first-child
+			margin-bottom: 22px
+		&:last-child
+			margin-bottom: 0
+	&__title
+		margin: 0
+		text-transform: uppercase
+	&__desc
+
++media(md)
+	.b-vacancy-props
+		&__col
+			margin: 0 !important
+		&__row
+			&:nth-last-child(2)
+				margin-bottom: 30px
+		&__btn
+			width: 100%

@@ -299,49 +299,6 @@
 // Секция с аккордионом
 .s-catalog-product-accordion
 
-// Аккордион
-.product-accordion
-	$p: &
-	&__item
-		border-top: 1px solid rgba(#292929, .1)
-		&:last-child
-			border-bottom: 1px solid rgba(#292929, .1)
-		&.active
-			#{$p}__btn .vertical
-				transform: rotate(-90deg)
-				opacity: 0
-	&__head
-		display: flex
-		justify-content: space-between
-		align-items: center
-		padding: 50px 0 45px
-	&__title
-		margin: 0
-		text-transform: uppercase
-		cursor: pointer
-	&__btn
-		display: flex
-		justify-content: center
-		align-items: center
-		width: 30px
-		height: 30px
-		background-color: transparent
-		border: none
-		margin-right: -8px
-		padding: 0
-		outline: none !important
-		cursor: pointer
-		.vertical
-			transform-origin: 50% 50%
-			transition: all .2s ease-out
-	&__body
-		padding: 0 0 60px
-
-+media(md)
-	.product-accordion
-		&__head
-			padding: 26px 0
-
 // Характеристики продуктов
 .product-specifications
 	&__grid

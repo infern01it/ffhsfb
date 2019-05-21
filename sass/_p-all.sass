@@ -72,10 +72,16 @@
 
 +media(md)
 	.s-next
-		padding: 75px 15px 126px
+		padding-left: 10px
+		padding-right: 10px
 		&__title
 			text-align: left
 			margin: 0 0 22px
+
++media(sm)
+	.s-next
+		padding-left: 15px
+		padding-right: 15px
 
 // Галерея фото
 .slider-popup
@@ -201,10 +207,69 @@
 +media(md)
 	.s-start-desc
 		padding-top: 81px
+		padding-left: 10px
+		padding-right: 10px
 
 +media(sm)
 	.s-start-desc
-		padding: 81px 15px 0
+		padding-left: 15px
+		padding-right: 1px
 		&__btn
 			margin-top: 52px
 			width: 100%
+
+// Аккордион
+.b-accordion
+	$p: &
+	&__item
+		border-top: 1px solid rgba(#292929, .1)
+		&:last-child
+			border-bottom: 1px solid rgba(#292929, .1)
+		&.active
+			#{$p}__btn .vertical
+				transform: rotate(-90deg)
+				opacity: 0
+	&__head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 50px 0 45px
+	&__title
+		margin: 0
+		text-transform: uppercase
+		cursor: pointer
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 30px
+		height: 30px
+		background-color: transparent
+		border: none
+		margin-right: -8px
+		padding: 0
+		outline: none !important
+		cursor: pointer
+		.vertical
+			transform-origin: 50% 50%
+			transition: all .2s ease-out
+	&__body
+		padding: 0 0 60px
+
++media(md)
+	.b-accordion
+		&__head
+			padding: 26px 0
+
+// Блок с описанием в аккордионах и т.д.
+.b-desc
+	h4
+		text-transform: uppercase
+		margin: 0 0 22px
+	h5
+		margin: 0 0 22px
+		padding-left: 12px
+	ul, ol
+		margin: 0 0 28px
+	*:last-child
+		margin: 0

@@ -3,7 +3,7 @@
 <head>
 		<meta charset="utf-8">
 	
-		<title>Компания - Партнеры</title>
+		<title>Компания - Вакансии</title>
 		<meta name="description" content="">
 	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +22,7 @@
 		<script src="js/libs/jquery-3.2.1.min.js"></script>
 		<script src="js/libs/jquery.switchPopup.js"></script>
 		<script src="js/common.js"></script>
+		<script src="js/b-accordion.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -279,120 +280,344 @@
 		</div>
 	</header>
 	
-	<main class="main p-company-partners">
-		<section class="p-company-partners__head s-head">
+	<main class="main p-company-vacancy">
+		<section class="p-company-vacancy__head s-head">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
 						<div class="s-head__title-wrap">
-							<h1 class="s-head__title h1">Наши партнеры</h1>
+							<h1 class="s-head__title h1">Работа в компании DATAPHONE</h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-company-partners__desc s-start-desc">
+		<section class="p-company-vacancy__desc s-start-desc">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
 						<div class="s-start-desc__content b-content">
-							<p>С помощью оборудования Linea Pro с опцией чтения RFID – меток осуществляется сканирование товарной единицы, а антенны определяют местоположение товара в режиме реального времени. Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром и его перемещением. В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин».</p>
-							<p>Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром. В основе представленного решения лежит система отслеживания товара, которая позволяет видеть товар на каждом этапе в цепочке.</p>
+							<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин».</p>
+							<p>С помощью оборудования Linea Pro с опцией чтения RFID – меток осуществляется сканирование товарной единицы, а антенны определяют местоположение товара в режиме реального времени. Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром и его перемещением.</p>
 						</div>
 
-						<button class="s-start-desc__btn btn">Стать партнером</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-company-partners__cards s-default s-company-partners-cards">
+		<section class="p-company-vacancy__accordion s-default">
 			<div class="container">
 				<div class="row">
-					<div class="s-company-partners-cards__col col-6 col-md-6 col-lg-4">
-						<div class="s-company-partners-cards__card b-partner">
-							<div class="b-partner__logo">
-								<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg">
-							</div>
+					<div class="order-1 order-lg-1 col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="s-default__title-wrap">
+							<h3 class="s-default__title h3">Вакансии</h3>
+						</div>
+					</div>
+				</div>
+				<div class="b-accordion">
+					<div class="b-accordion__item active">
+						<div class="b-accordion__head">
+							<h3 class="b-accordion__title">Программист 1с</h3>
+							<button class="b-accordion__btn">
+								<img src="/img/minus.svg" class="img-svg">
+							</button>
+						</div>
+						<div class="b-accordion__body b-vacancy" style="display: block">
+							<div class="row">
+								<div class="col-6 col-md-3 offset-lg-1 col-lg-3">
+									<div class="b-vacancy__props b-vacancy-props">
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Опыт работы</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>1–3 года</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Занятость</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>Полная занятость, полный день</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-6 col-md-6 col-lg-8">
+												<button class="b-vacancy-props__btn btn">Отозваться</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-md-3 col-lg-3">
+									<div class="b-vacancy__desc b-content b-desc">
+										<h4>Обязанности</h4>
 
-							<h4 class="b-partner__title">Rolls Royce</h4>
+										<ul>
+											<li>Полная административная поддержка руководителя.</li>
+											<li>Администрирование web-ресурсов.</li>
+											<li>Поиск и размещение профильной информации.</li>
+											<li>Составление и подготовка коммерческой документации.</li>
+											<li>Ведение переговоров с партнёрами компании.</li>
+											<li>Оформление виз и других необходимых разрешений.</li>
+										</ul>
 
-							<div class="b-partner__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
+										<h4>Требования</h4>
+
+										<ul>
+											<li>Обучаемость</li>
+											<li>Развитое чувство ответственности</li>
+											<li>Трудолюбие</li>
+										</ul>
+
+										<h4>Условия</h4>
+
+										<ul>
+											<li>График работы: понедельник-пятница с 10-00 до 19-00.</li>
+											<li>Оформление: по ТК.</li>
+											<li>Заработная плата от 90000 руб.(нетто)</li>
+											<li>Бесплатное питание. Возможна оплата проживания.</li>
+											<li>ул. 2-я Синичкина 9а, БЦ «Синица Плаза»</li>
+											<li>Полный рабочий день. На территории работодателя</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="s-company-partners-cards__col col-6 col-md-6 col-lg-4">
-						<div class="s-company-partners-cards__card b-partner">
-							<div class="b-partner__logo">
-								<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg">
-							</div>
+					<div class="b-accordion__item">
+						<div class="b-accordion__head">
+							<h3 class="b-accordion__title">Помошник руководителя</h3>
+							<button class="b-accordion__btn">
+								<img src="/img/minus.svg" class="img-svg">
+							</button>
+						</div>
+						<div class="b-accordion__body" style="display: none">
+							<div class="row">
+								<div class="col-6 col-md-3 offset-lg-1 col-lg-3">
+									<div class="b-vacancy__props b-vacancy-props">
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Опыт работы</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>1–3 года</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Занятость</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>Полная занятость, полный день</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-6 col-md-6 col-lg-8">
+												<button class="b-vacancy-props__btn btn">Отозваться</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-md-3 col-lg-3">
+									<div class="b-vacancy__desc b-content b-desc">
+										<h4>Обязанности</h4>
 
-							<h4 class="b-partner__title">Fast Company</h4>
+										<ul>
+											<li>Полная административная поддержка руководителя.</li>
+											<li>Администрирование web-ресурсов.</li>
+											<li>Поиск и размещение профильной информации.</li>
+											<li>Составление и подготовка коммерческой документации.</li>
+											<li>Ведение переговоров с партнёрами компании.</li>
+											<li>Оформление виз и других необходимых разрешений.</li>
+										</ul>
 
-							<div class="b-partner__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
+										<h4>Требования</h4>
+
+										<ul>
+											<li>Обучаемость</li>
+											<li>Развитое чувство ответственности</li>
+											<li>Трудолюбие</li>
+										</ul>
+
+										<h4>Условия</h4>
+
+										<ul>
+											<li>График работы: понедельник-пятница с 10-00 до 19-00.</li>
+											<li>Оформление: по ТК.</li>
+											<li>Заработная плата от 90000 руб.(нетто)</li>
+											<li>Бесплатное питание. Возможна оплата проживания.</li>
+											<li>ул. 2-я Синичкина 9а, БЦ «Синица Плаза»</li>
+											<li>Полный рабочий день. На территории работодателя</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="s-company-partners-cards__col col-6 col-md-6 col-lg-4">
-						<div class="s-company-partners-cards__card b-partner">
-							<div class="b-partner__logo">
-								<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg">
-							</div>
+					<div class="b-accordion__item">
+						<div class="b-accordion__head">
+							<h3 class="b-accordion__title">Оператор разработчик данных</h3>
+							<button class="b-accordion__btn">
+								<img src="/img/minus.svg" class="img-svg">
+							</button>
+						</div>
+						<div class="b-accordion__body" style="display: none">
+							<div class="row">
+								<div class="col-6 col-md-3 offset-lg-1 col-lg-3">
+									<div class="b-vacancy__props b-vacancy-props">
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Опыт работы</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>1–3 года</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Занятость</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>Полная занятость, полный день</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-6 col-md-6 col-lg-8">
+												<button class="b-vacancy-props__btn btn">Отозваться</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-md-3 col-lg-3">
+									<div class="b-vacancy__desc b-content b-desc">
+										<h4>Обязанности</h4>
 
-							<h4 class="b-partner__title">Rolls Royce</h4>
+										<ul>
+											<li>Полная административная поддержка руководителя.</li>
+											<li>Администрирование web-ресурсов.</li>
+											<li>Поиск и размещение профильной информации.</li>
+											<li>Составление и подготовка коммерческой документации.</li>
+											<li>Ведение переговоров с партнёрами компании.</li>
+											<li>Оформление виз и других необходимых разрешений.</li>
+										</ul>
 
-							<div class="b-partner__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
+										<h4>Требования</h4>
+
+										<ul>
+											<li>Обучаемость</li>
+											<li>Развитое чувство ответственности</li>
+											<li>Трудолюбие</li>
+										</ul>
+
+										<h4>Условия</h4>
+
+										<ul>
+											<li>График работы: понедельник-пятница с 10-00 до 19-00.</li>
+											<li>Оформление: по ТК.</li>
+											<li>Заработная плата от 90000 руб.(нетто)</li>
+											<li>Бесплатное питание. Возможна оплата проживания.</li>
+											<li>ул. 2-я Синичкина 9а, БЦ «Синица Плаза»</li>
+											<li>Полный рабочий день. На территории работодателя</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="s-company-partners-cards__col col-6 col-md-6 col-lg-4">
-						<div class="s-company-partners-cards__card b-partner">
-							<div class="b-partner__logo">
-								<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg">
-							</div>
-
-							<h4 class="b-partner__title">Audi</h4>
-
-							<div class="b-partner__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
-							</div>
+					<div class="b-accordion__item">
+						<div class="b-accordion__head">
+							<h3 class="b-accordion__title">Менеджер по упралению персоналом</h3>
+							<button class="b-accordion__btn">
+								<img src="/img/minus.svg" class="img-svg">
+							</button>
 						</div>
-					</div>
-					<div class="s-company-partners-cards__col col-6 col-md-6 col-lg-4">
-						<div class="s-company-partners-cards__card b-partner">
-							<div class="b-partner__logo">
-								<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg">
-							</div>
+						<div class="b-accordion__body" style="display: none">
+							<div class="row">
+								<div class="col-6 col-md-3 offset-lg-1 col-lg-3">
+									<div class="b-vacancy__props b-vacancy-props">
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Опыт работы</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>1–3 года</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<h4 class="b-vacancy-props__title h4">Занятость</h4>
+											</div>
+											<div class="b-vacancy-props__col col-3 col-md-3 col-lg-8">
+												<div class="b-vacancy-props__desc b-content">
+													<p>Полная занятость, полный день</p>
+												</div>
+											</div>
+										</div>
+										<div class="b-vacancy-props__row row">
+											<div class="b-vacancy-props__col col-6 col-md-6 col-lg-8">
+												<button class="b-vacancy-props__btn btn">Отозваться</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-md-3 col-lg-3">
+									<div class="b-vacancy__desc b-content b-desc">
+										<h4>Обязанности</h4>
 
-							<h4 class="b-partner__title">Gazprom</h4>
+										<ul>
+											<li>Полная административная поддержка руководителя.</li>
+											<li>Администрирование web-ресурсов.</li>
+											<li>Поиск и размещение профильной информации.</li>
+											<li>Составление и подготовка коммерческой документации.</li>
+											<li>Ведение переговоров с партнёрами компании.</li>
+											<li>Оформление виз и других необходимых разрешений.</li>
+										</ul>
 
-							<div class="b-partner__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
-							</div>
-						</div>
-					</div>
-					<div class="s-company-partners-cards__col col-6 col-md-6 col-lg-4">
-						<div class="s-company-partners-cards__card b-partner">
-							<div class="b-partner__logo">
-								<img src="http://dl4.joxi.net/drive/2019/05/01/0024/1056/1618976/76/87029f36f9.jpg">
-							</div>
+										<h4>Требования</h4>
 
-							<h4 class="b-partner__title">Aston Martin</h4>
+										<ul>
+											<li>Обучаемость</li>
+											<li>Развитое чувство ответственности</li>
+											<li>Трудолюбие</li>
+										</ul>
 
-							<div class="b-partner__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин»</p>
+										<h4>Условия</h4>
+
+										<ul>
+											<li>График работы: понедельник-пятница с 10-00 до 19-00.</li>
+											<li>Оформление: по ТК.</li>
+											<li>Заработная плата от 90000 руб.(нетто)</li>
+											<li>Бесплатное питание. Возможна оплата проживания.</li>
+											<li>ул. 2-я Синичкина 9а, БЦ «Синица Плаза»</li>
+											<li>Полный рабочий день. На территории работодателя</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		
-		<section class="p-company-partners__next s-next">
+	
+		<section class="p-company-vacancy__next s-next">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-2 offset-lg-2">
@@ -410,7 +635,6 @@
 			</div>
 		</section>
 	</main>
-
 	
 	<footer class="footer">
 		<div class="footer__top">
