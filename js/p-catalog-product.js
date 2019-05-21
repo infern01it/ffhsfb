@@ -87,17 +87,8 @@ $(function() {
 		resizeAllGridItems();
 	});
 
-	// Аккордион
-	$('.product-accordion__title, .product-accordion__btn').on('click', function() {
-		var $parent = $(this).parents('.product-accordion__item');
-		if( !$parent.hasClass('active') ) {
-			$parent.addClass('active');
-			$parent.children('.product-accordion__body').slideDown(400);
-			resizeAllGridItems();
-		} else {
-			$parent.removeClass('active');
-			$parent.children('.product-accordion__body').slideUp(400);
-		}
+	$('.b-accordion').on('toggle', function() {
+		resizeAllGridItems();
 	});
 
 	// Табы
