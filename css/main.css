@@ -2378,6 +2378,10 @@ a.sm-text:hover, a.more-link__text:hover {
 }
 
 @media (max-width: 999.98px) {
+	.s-next {
+		padding: 75px 15px 126px;
+	}
+
 	.s-next__title {
 		text-align: left;
 		margin: 0 0 22px;
@@ -2581,6 +2585,31 @@ a.sm-text:hover, a.more-link__text:hover {
 
 	.s-customers__logo-item:nth-last-child(3) {
 		margin-bottom: 10px;
+	}
+}
+
+.s-start-desc {
+	padding-top: 121px;
+}
+
+.s-start-desc__btn {
+	margin-top: 74px;
+}
+
+@media (max-width: 999.98px) {
+	.s-start-desc {
+		padding-top: 81px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.s-start-desc {
+		padding: 81px 15px 0;
+	}
+
+	.s-start-desc__btn {
+		margin-top: 52px;
+		width: 100%;
 	}
 }
 
@@ -4020,16 +4049,6 @@ a.sm-text:hover, a.more-link__text:hover {
 	}
 }
 
-.s-company-about-desc {
-	padding-top: 121px;
-}
-
-@media (max-width: 999.98px) {
-	.s-company-about-desc {
-		padding-top: 81px;
-	}
-}
-
 .s-company-about-competencies__row {
 	-webkit-justify-content: space-around;
 	-ms-flex-pack: distribute;
@@ -4126,5 +4145,65 @@ a.sm-text:hover, a.more-link__text:hover {
 	.s-company-about-photo__slider {
 		margin-right: -15px;
 		margin-left: -15px;
+	}
+}
+
+/* Страница: Компания - Партнеры */
+.s-company-partners-cards__col {
+	margin-bottom: 30px;
+}
+
+.s-company-partners-cards__col:nth-last-child(1), .s-company-partners-cards__col:nth-last-child(2) {
+	margin-bottom: 0;
+}
+
+.s-company-partners-cards__card {
+	height: 100%;
+}
+
+@media (max-width: 767.98px) {
+	.s-company-partners-cards__col {
+		margin-bottom: 20px;
+	}
+
+	.s-company-partners-cards__col:nth-last-child(2) {
+		margin-bottom: 20px;
+	}
+}
+
+.b-partner {
+	padding: 26px 50px 38px;
+	background-color: #f8f7f7;
+}
+
+.b-partner__logo {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 0 0 34px;
+}
+
+.b-partner__logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.b-partner__title {
+	text-transform: uppercase;
+	margin: 0 0 22px;
+}
+
+@media (max-width: 767.98px) {
+	.b-partner {
+		padding: 20px 20px 38px;
+	}
+
+	.b-partner__logo {
+		margin: 0 auto 18px;
 	}
 }
