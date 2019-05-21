@@ -165,3 +165,47 @@
 				margin-bottom: 30px
 		&__btn
 			width: 100%
+
+/* Страница: Компания - Реквизиты */
+// Блок реквизитов
+.requisites-block
+	padding: 71px 0 82px
+	background-color: #f8f7f7
+	&__row
+	&__col
+	&__logo
+		margin-left: 80px
+	&__table
+		width: 100%
+
++media(md)
+	.requisites-block
+		padding: 30px 20px
+		&__logo
+			margin-left: 0
+			margin-bottom: 30px
+
+.logo
+	display: block
+
+// Таблица реквизитов
+.requisites-table
+	&__row
+		height: 44px
+	&__col
+		&_1
+			width: 20%
+		&_2
+			width: 80%
+	&__title
+		text-transform: uppercase
+		margin: 0
+	&__desc
+
++media(md)
+	.requisites-table
+		&__col
+			&_1
+				min-width: 100px
+			&_2
+				width: auto

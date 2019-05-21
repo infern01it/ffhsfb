@@ -4281,3 +4281,59 @@ a.sm-text:hover, a.more-link__text:hover {
 		width: 100%;
 	}
 }
+
+/* Страница: Компания - Реквизиты */
+.requisites-block {
+	padding: 71px 0 82px;
+	background-color: #f8f7f7;
+}
+
+.requisites-block__logo {
+	margin-left: 80px;
+}
+
+.requisites-block__table {
+	width: 100%;
+}
+
+@media (max-width: 999.98px) {
+	.requisites-block {
+		padding: 30px 20px;
+	}
+
+	.requisites-block__logo {
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+}
+
+.logo {
+	display: block;
+}
+
+.requisites-table__row {
+	height: 44px;
+}
+
+.requisites-table__col_1 {
+	width: 20%;
+}
+
+.requisites-table__col_2 {
+	width: 80%;
+}
+
+.requisites-table__title {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+@media (max-width: 999.98px) {
+	.requisites-table__col_1 {
+		min-width: 100px;
+	}
+
+	.requisites-table__col_2 {
+		width: auto;
+	}
+}
