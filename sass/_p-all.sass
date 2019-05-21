@@ -1,4 +1,5 @@
-.sect-head
+// Секция с заголовком
+.s-head
 	padding-top: 105px
 	&__title-wrap
 		text-align: center
@@ -7,11 +8,51 @@
 		text-transform: uppercase
 
 +media(sm)
-	.sect-head
+	.s-head
 		padding-top: 65px
 
+// Стандартная секция
+.s-default
+	$p: &
+	padding-top: 135px
+	&__title-wrap
+		text-align: center
+		margin: 0 0 127px
+	&__title
+		text-transform: uppercase
+	&__more
+		text-align: right
+	&_dark
+		background-color: #242424
+		#{$p}__title
+			color: #ffffff
+	&_pb
+		padding-bottom: 176px
+
++media(md)
+	.s-default
+		padding-top: 70px
+		padding-left: 10px
+		padding-right: 10px
+		&__title-wrap
+			margin: 0 0 39px
+		&_pb
+			padding-bottom: 68px
+
++media(sm)
+	.s-default
+		padding-left: 15px
+		padding-right: 15px
+
+// Секция с линией разделяющими секции
+.s-line
+	&__hr
+		margin: 0
+		border: none
+		border-bottom: 1px solid rgba(#292929, .1)
+
 // Секция "Смотрите также"
-.sect-next
+.s-next
 	padding: 75px 0 126px
 	&__title
 		text-transform: uppercase
@@ -30,7 +71,7 @@
 				margin: 0
 
 +media(md)
-	.sect-next
+	.s-next
 		&__title
 			text-align: left
 			margin: 0 0 22px
@@ -105,3 +146,45 @@
 				transform: translate(calc((50vw - 30px) * -1), -50%)
 			&_right
 				transform: translate(calc(50vw - 30px), -50%)
+
+// Секция клиентов
+.s-customers
+	&__desc
+		margin: 0 0 139px
+	&__btn
+	&__logo-list
+		display: flex
+		flex-wrap: wrap
+	&__logo-item
+		width: 126px
+		flex: 0 0 126px
+		margin-right: calc((100% - 378px) / 2)
+		margin-bottom: 20px
+		&:nth-child(3n)
+			margin-right: 0
+		&:nth-last-child(1),
+		&:nth-last-child(2),
+		&:nth-last-child(3)
+			margin-bottom: 0
+
++media(md)
+	.s-customers
+		&__desc
+			margin: 0 0 52px
+		&__btn
+			margin: 0 0 46px
+			width: 100%
+		&__logo-item
+			width: 50%
+			flex: 0 0 50%
+			margin-right: 0
+			text-align: center
+			&:nth-last-child(3)
+				margin-bottom: 20px
+
++media(sm)
+	.s-customers
+		&__logo-item
+			margin-bottom: 10px
+			&:nth-last-child(3)
+				margin-bottom: 10px

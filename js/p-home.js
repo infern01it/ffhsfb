@@ -1,9 +1,9 @@
 $(function() {
   window.mainSlider = function(globalOptions) {
-    var mainSliderParent = $('.home-slider');
-    var mainSlider = $('.home-slider__slick');
-    var mainSliderItem = $('.home-slider__item');
-    var mainSliderLoaderLine = $('.home-slider__loader-line');
+    var mainSliderParent = $('.s-home-slider');
+    var mainSlider = $('.s-home-slider__slick');
+    var mainSliderItem = $('.s-home-slider__item');
+    var mainSliderLoaderLine = $('.s-home-slider__loader-line');
   
     $(document).ready(function() {
       mainSliderParent.css('opacity', 1);
