@@ -1,0 +1,55 @@
+/* Страница: Проекты (список) */
+// Секция с кнопками фильтрации карточек
+.s-project-list-navs
+	padding: 126px 0 66px
+
+// Секция с карточками проектов
+.s-project-list-cards
+	&__col
+		margin-bottom: 30px
+		&:nth-last-child(1),
+		&:nth-last-child(2)
+			margin-bottom: 0
+	&__card
+		height: 100%
+
++media(md)
+	.s-project-list-cards
+		padding-left: 10px
+		padding-right: 10px
+
++media(sm)
+	.s-project-list-cards
+		padding-left: 15px
+		padding-right: 15px
+		&__col
+			margin-bottom: 20px
+			&:nth-last-child(2)
+				margin-bottom: 20px
+
+.b-card-navs
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: -20px
+	&__btn
+		height: 28px
+		border: 1px solid rgba(#000, .2)
+		border-radius: 14px
+		outline: none !important
+		margin: 0 10px 20px
+		padding: 0 20px
+		white-space: nowrap
+		text-align: center
+		line-height: 28px
+		color: #1a1a1a
+		cursor: pointer
+		background-color: transparent
+		transition: all .2s ease-out
+		&.active
+			background-color: #1a1a1a
+			border-color: #1a1a1a
+			color: #ffffff
+		&:hover, &:focus, &:active
+			border-color: #1a1a1a
