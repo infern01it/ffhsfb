@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg width="7px" height="15px" viewBox="0 0 7 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>arrow-more</title>
-    <desc>Created with Sketch.</desc>
     <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Apple-TV" transform="translate(-154.000000, -1115.000000)" fill="#1A1A1A">
             <path d="M157.144062,1125.87105 L150.147434,1119.75158 C149.950855,1119.57965 149.950855,1119.30089 150.147434,1119.12895 C150.344014,1118.95702 150.662732,1118.95702 150.859311,1119.12895 L157.5,1124.9371 L164.140689,1119.12895 C164.337268,1118.95702 164.655986,1118.95702 164.852566,1119.12895 C165.049145,1119.30089 165.049145,1119.57965 164.852566,1119.75158 L157.855938,1125.87105 C157.659359,1126.04298 157.340641,1126.04298 157.144062,1125.87105 Z" id="arrow-more" transform="translate(157.500000, 1122.500000) rotate(-90.000000) translate(-157.500000, -1122.500000) "></path>
