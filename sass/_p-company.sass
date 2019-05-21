@@ -24,15 +24,6 @@
 			padding-left: 15px
 			padding-right: 15px
 
-// Секция с описанием сразу под заголовком
-.s-company-about-desc
-	padding-top: 121px
-	&__content
-
-+media(md)
-	.s-company-about-desc
-		padding-top: 81px
-
 // Секция "Наши компетенции"
 .s-company-about-competencies
 	&__row
@@ -94,3 +85,48 @@
 		&__slider
 			margin-right: -15px
 			margin-left: -15px
+
+/* Страница: Компания - Партнеры */
+// Секция с карточками партнёров
+.s-company-partners-cards
+	&__col
+		margin-bottom: 30px
+		&:nth-last-child(1),
+		&:nth-last-child(2)
+			margin-bottom: 0
+	&__card
+		height: 100%
+
++media(sm)
+	.s-company-partners-cards
+		&__col
+			margin-bottom: 20px
+			&:nth-last-child(2)
+				margin-bottom: 20px
+
+// Каточка партнера
+.b-partner
+	padding: 26px 50px 38px
+	background-color: #f8f7f7
+	&__logo
+		position: relative
+		width: 100px
+		height: 100px
+		margin: 0 0 34px
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: contain
+	&__title
+		text-transform: uppercase
+		margin: 0 0 22px
+	&__desc
+
++media(sm)
+	.b-partner
+		padding: 20px 20px 38px
+		&__logo
+			margin: 0 auto 18px
