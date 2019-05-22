@@ -12,9 +12,16 @@
 		display: block
 		margin-top: 19px
 
++media(md)
+	.s-head
+		padding-left: 10px
+		padding-right: 10px
+
 +media(sm)
 	.s-head
 		padding-top: 65px
+		padding-left: 15px
+		padding-right: 15px
 		&__back
 			margin-top: 0
 			margin-bottom: 30px
@@ -58,6 +65,16 @@
 		margin: 0
 		border: none
 		border-bottom: 1px solid rgba(#292929, .1)
+
++media(md)
+	.s-line
+		padding-left: 10px
+		padding-right: 10px
+
++media(sm)
+	.s-line
+		padding-left: 15px
+		padding-right: 15px
 
 // Секция "Смотрите также"
 .s-next
@@ -221,7 +238,7 @@
 +media(sm)
 	.s-start-desc
 		padding-left: 15px
-		padding-right: 1px
+		padding-right: 15px
 		&__btn
 			margin-top: 52px
 			width: 100%

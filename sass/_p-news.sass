@@ -31,3 +31,21 @@
 		&__col
 			&:nth-last-child(2)
 				margin-bottom: 20px
+
+// Секция с похожими новостями
++media(md)
+	.s-project-info-news
+		padding-left: 10px
+		padding-right: 10px
+		&__col
+			margin-bottom: 20px
+			&:nth-last-child(1),
+			&:nth-last-child(2)
+				margin-bottom: 30px
+		&__card
+			height: 100%
+
++media(sm)
+	.s-project-info-news
+		padding-left: 15px
+		padding-right: 15px
