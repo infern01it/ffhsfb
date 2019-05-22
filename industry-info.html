@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+	
+		<title>Отрасль (одна)</title>
+		<meta name="description" content="">
+	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<meta property="og:image" content="path/to/image.jpg">
+		
+		<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+		
+		<link rel="stylesheet" href="css/reboot.css">
+		<link rel="stylesheet" href="css/libs/slick.css">
+		<link rel="stylesheet" href="css/libs/slick-theme.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+		<script src="js/libs/jquery-3.2.1.min.js"></script>
+		<script src="js/libs/slick.min.js"></script>
+		<script src="js/libs/jquery.switchPopup.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/b-slider-popup.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="header__left">
+					<a href="#" class="header__logo logo">
+						<img src="img/logo.svg" class="img-svg">
+					</a>
+				</div>
+				<div class="header__right">
+					<div class="header__menu">
+						<menu class="header-menu">
+							<nav class="header-menu__nav header-menu__nav_1 navigation-blocks">
+								<ul class="navigation-blocks__list">
+									<li class="navigation-blocks__item is-parent active">
+										<a href="#" class="navigation-blocks__link">Решения</a>
+										<div class="navigation-blocks__submenu submenu-block submenu-block_el_1x4">
+											<ul class="submenu-block__list">
+												<li class="submenu-block__item active">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/store-online.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">Store online</h3>
+														<span class="icon-menu__desc sm-text">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/salepoint.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">SAle point</h3>
+														<span class="icon-menu__desc sm-text">Мобильная касса</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">DPS</h3>
+														<span class="icon-menu__desc sm-text">Решение для банков</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu icon-menu_desc">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps-m.svg" class="img-svg">
+														</div>
+														<h3 class="icon-menu__title h3">DPS.MOBILE</h3>
+														<span class="icon-menu__desc sm-text">Встраиваемое решение</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-blocks__item is-parent">
+										<a href="#" class="navigation-blocks__link">Оборудование</a>
+										<div class="navigation-blocks__submenu submenu-block submenu-block_el_2x3">
+											<ul class="submenu-block__list">
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/chehli.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Чехлы со сканером ШК для Apple</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/terminal-sbora.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Терминалы сбора данных</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/scanner.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Сканеры ШК</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/pl-terminal.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Платежные терминалы</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/printer.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Принтеры чеков и этикеток</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-2/kassa.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Контрольно-кассовая техника</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-blocks__item is-parent">
+										<a href="#" class="navigation-blocks__link">Отрасли</a>
+										<div class="navigation-blocks__submenu submenu-block submenu-block_el_1x4">
+											<ul class="submenu-block__list">
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/store-online.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/salepoint.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+												<li class="submenu-block__item">
+													<a href="#" class="icon-menu">
+														<div class="icon-menu__icon">
+															<img src="img/menu-1/dps-m.svg" class="img-svg">
+														</div>
+														<span class="icon-menu__title">Мобильный учет товаров</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+								</ul>
+							</nav>
+	
+							<nav class="header-menu__nav header-menu__nav_2 navigation-list">
+								<ul class="navigation-list__list">
+									<li class="navigation-list__item is-parent">
+										<a href="#" class="navigation-list__link">Компания</a>
+										<div class="navigation-list__submenu submenu-list">
+											<ul class="submenu-list__list">
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">О компании</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Проекты</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Партнеры</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Вакансии</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Реквизиты</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-list__item">
+										<a href="#" class="navigation-list__link">Пресс-центр</a>
+									</li>
+									<li class="navigation-list__item is-parent">
+										<a href="#" class="navigation-list__link">Поддержка</a>
+										<div class="navigation-list__submenu submenu-list">
+											<ul class="submenu-list__list">
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">ПО и документация</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Связаться с техподдержкой</a>
+												</li>
+												<li class="submenu-list__item">
+													<a href="#" class="submenu-list__link">Сервисное обслуживание оборудования</a>
+												</li>
+											</ul>
+										</div>
+										<button type="button" class="navigation-blocks__arrow"></button>
+									</li>
+									<li class="navigation-list__item">
+										<a href="#" class="navigation-list__link">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+
+							<div class="header-menu__search-form header-search">
+								<div class="header-search__row">
+									<div class="header-search__btn-wrap">
+										<button class="header-search__btn">
+											<img src="img/search.svg" class="img-svg">
+										</button>
+									</div>
+									<form class="header-search__field">
+										<input type="search" class="header-search__input" placeholder="Поиск на dataphone.su…">
+									</form>
+									<div class="header-search__recomended search-recomended">
+										<span class="search-recomended__title sm-text">Рекомендации</span>
+										<ul class="search-recomended__list">
+											<li class="search-recomended__item">
+												<button type="button" class="search-recomended__btn">Сканеры штрих-кодов</button>
+											</li>
+											<li class="search-recomended__item">
+												<button type="button" class="search-recomended__btn">Платежные терминалы</button>
+											</li>
+											<li class="search-recomended__item">
+												<button type="button" class="search-recomended__btn">Мобильная касса</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+	
+							<div class="header-menu__search-tgl-btn">
+								<button class="header-search-tgl-btn close">
+									<img src="img/search.svg" class="header-search-tgl-btn__search img-svg">
+									<img src="img/close-in.svg" class="header-search-tgl-btn__close img-svg">
+								</button>
+							</div>
+						</menu>
+					</div>
+
+					<div class="header__burger">
+						<button class="header-burger close js-tgl-menu">
+							<span class="header-burger__icon">
+								<span></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main class="main p-industry-info">
+		<section class="p-industry-info__head s-head">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-2">
+						<a href="#" class="s-head__back more-link">
+							<img src="img/arrow-more.svg" class="more-link__arrow img-svg">
+							<span class="more-link__text">Назад к отраслям</span>
+						</a>
+					</div>
+					<div class="col-6 col-md-6 col-lg-4">
+						<div class="s-head__title-wrap">
+							<h1 class="s-head__title h1">Ритейл</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-industry-info__desc s-start-desc">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
+						<div class="s-start-desc__content b-content">
+							<p>С помощью оборудования Linea Pro с опцией чтения RFID – меток осуществляется сканирование товарной единицы, а антенны определяют местоположение товара в режиме реального времени. Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром и его перемещением. </p>
+							<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин». С помощью оборудования Linea Pro с опцией чтения RFID – меток осуществляется сканирование товарной единицы, а антенны определяют местоположение товара в режиме реального времени. Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром и его перемещением.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-industry-info__statistics s-default s-industry-info-statistics">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="s-default__title-wrap">
+							<h3 class="s-default__title h3">С нами работают по системе ритейл</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="s-industry-info-statistics__col">
+						<div class="s-industry-info-statistics__card b-statistic">
+							<h4 class="b-statistic__title h1">1 236 700</h4>
+							<span class="b-statistic__subtitle sm-text">Торговых точек в РФ</span>
+						</div>
+					</div>
+					<div class="s-industry-info-statistics__col">
+						<div class="s-industry-info-statistics__card b-statistic">
+							<h4 class="b-statistic__title h1">178</h4>
+							<span class="b-statistic__subtitle sm-text">Компаний</span>
+						</div>
+					</div>
+					<div class="s-industry-info-statistics__col">
+						<div class="s-industry-info-statistics__card b-statistic">
+							<h4 class="b-statistic__title h1">10</h4>
+							<span class="b-statistic__subtitle sm-text">Стран</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-industry-info__desc s-default s-start-desc">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
+						<div class="s-start-desc__content b-content b-desc">
+							<h4>Преимущества отрасли ритейл</h4>
+
+							<ul>
+								<li>Интеграция платежных терминалов с платежными системами банков и взаимодействие с мобильными фискальными принтерами входит в компетенцию компании;</li>
+								<li>Малый поток обслуживаемых клиентов оффлайн;</li>
+								<li>Отсутствие платежного решения с применением онлайн касс.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-industry-info__photo s-default s-project-info-photo">
+			<div class="s-project-info-photo__slider slider-popup">
+				<div class="slider-popup__slick">
+					<div class="slider-popup__item">
+						<img src="/content/slider/img-1.png" class="slider-popup__img slider-popup__img_full">
+					</div>
+					<div class="slider-popup__item">
+						<img src="/content/slider/img-2.png" class="slider-popup__img slider-popup__img_full">
+					</div>
+					<div class="slider-popup__item">
+						<img src="/content/slider/img-3.png" class="slider-popup__img slider-popup__img_full">
+					</div>
+				</div>
+				<button class="slider-popup__arrow slider-popup__arrow_left"></button>
+				<button class="slider-popup__arrow slider-popup__arrow_right"></button>
+			</div>
+			<script>
+				$(function() {
+					window.initSliderPopup('slider-popup');
+				});
+			</script>
+		</section>
+
+		<section class="p-industry-info__next s-next">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-2 offset-lg-2">
+						<h4 class="s-next__title h">Смотрите также</h4>
+					</div>
+					<div class="col-6 col-md-6 col-lg-2">
+						<div class="s-next__menu">
+							<a href="#">Банки. Финтех</a>
+							<a href="#">Транспорт</a>
+							<a href="#">Вендинг. Терминалы самообслуживания</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<div class="row">
+					<div class="order-1 col-6 col-md-6 order-lg-1 col-lg-4">
+						<div class="footer__logo-wrap">
+							<div class="row">
+								<div class="footer__logo col-3 col-md-5 col-lg-8">
+									<a href="#" class="footer-logo">
+										<img src="img/logo.svg">
+									</a>
+								</div>
+								<div class="footer__social col-3 col-md-1">
+									<ul class="footer-socials">
+										<div class="footer-socials__item">
+											<a href="#" target="_blank" class="footer-socials__link">
+												<img src="/img/socials/fb.svg" alt="" class="footer-socials__icon img-svg">
+											</a>
+										</div>
+										<div class="footer-socials__item">
+											<a href="#" target="_blank" class="footer-socials__link">
+												<img src="/img/socials/in.svg" alt="" class="footer-socials__icon img-svg">
+											</a>
+										</div>
+										<div class="footer-socials__item">
+											<a href="#" target="_blank" class="footer-socials__link">
+												<img src="/img/socials/yt.svg" alt="" class="footer-socials__icon img-svg">
+											</a>
+										</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order-3 col-6 col-md-6 order-lg-2 col-lg-4">
+						<div class="row">
+							<div class="col-6 col-md-3 col-lg-4">
+								<div class="footer__menu footer__menu_1">
+									<nav class="footer-menu">
+										<a href="#" class="footer-menu__title">Оборудование</a>
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Чехлы со сканером ШК для Apple</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Терминалы сбора данных</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Сканнеры ШК</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Платежные терминалы</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Принтеры чеков и этикеток</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Контольно-кассовая техника</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="col-6 col-md-3 col-lg-4">
+								<div class="footer__menu footer__menu_2">
+									<nav class="footer-menu">
+										<a href="#" class="footer-menu__title">Оборудование</a>
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Store Online. Мобильный учет товаров</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Sale Point. Мобильная касса</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">DPS. Решения для бизнеса</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">DPS. Mobile</a>
+											</li>
+										</ul>
+										<a href="#" class="footer-menu__footer-link">Пресс-центр</a>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order-2 col-6 col-md-6 order-lg-3 col-lg-4">
+						<div class="footer__contacts footer-contacts">
+							<div class="footer-contacts__adress b-content">
+								<p>111020, Москва ул. 2-я Синичкина 9а, БЦ «Синица Плаза»</p>
+							</div>
+							<div class="footer-contacts__links">
+								<div class="footer-contacts__phone">
+									<a href="#">+7 (495) 308 93 93</a>
+								</div>
+								<div class="footer-contacts__email">
+									<a href="#">info@dataphone.su</a>
+								</div>
+								<div class="footer-contacts__site">
+									<a href="#">dataphone.su</a>
+								</div>
+							</div>
+	
+							<div class="footer-contacts__socials">
+								<div class="row">
+									<div class="col-lg-2">
+										<ul class="footer-socials">
+											<div class="footer-socials__item">
+												<a href="#" target="_blank" class="footer-socials__link">
+													<img src="/img/socials/fb.svg" alt="" class="footer-socials__icon img-svg">
+												</a>
+											</div>
+											<div class="footer-socials__item">
+												<a href="#" target="_blank" class="footer-socials__link">
+													<img src="/img/socials/in.svg" alt="" class="footer-socials__icon img-svg">
+												</a>
+											</div>
+											<div class="footer-socials__item">
+												<a href="#" target="_blank" class="footer-socials__link">
+													<img src="/img/socials/yt.svg" alt="" class="footer-socials__icon img-svg">
+												</a>
+											</div>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="order-4 col-6 col-md-6 order-lg-4 col-lg-4">
+						<div class="row">
+							<div class="col-3 col-md-3 col-lg-2">
+								<div class="footer__menu footer__menu_3">
+									<nav class="footer-menu">
+										<a href="#" class="footer-menu__title">Компания</a>
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">О компании</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Проекты</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Партнеры</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Вакансии</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Реквизиты</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="col-3 col-md-3 col-lg-2">
+								<div class="footer__menu footer__menu_4">
+									<nav class="footer-menu">
+										<a href="#" class="footer-menu__title">Отрасли</a>
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Ритейл</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Банки. Финтех</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Вендинг</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Транспорт</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="col-6 col-md-3 col-lg-4">
+								<div class="footer__menu footer__menu_5">
+									<nav class="footer-menu">
+										<a href="#" class="footer-menu__title">Поддержка</a>
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">ПО и документация</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Связаться с техподдержкой</a>
+											</li>
+											<li class="footer-menu__item">
+												<a href="#" class="footer-menu__link">Сервисное обслуживание оборудования</a>
+											</li>
+										</ul>
+										<a href="#" class="footer-menu__footer-link">Контакты</a>
+									</nav>
+								</div>
+							</div>
+							<div class="col-6 col-md-6">
+								<div class="footer__menu_6">
+									<div class="footer-menu-dop">
+										<ul class="footer-menu-dop__list">
+											<li class="footer-menu-dop__item">
+												<a href="#" class="footer-menu-dop__link">Пресс-центр</a>
+											</li>
+											<li class="footer-menu-dop__item">
+												<a href="#" class="footer-menu-dop__link">Контакты</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 col-lg-4">
+						<div class="footer__copy b-content">
+							<p>© 2019 DATAPHONE LLC. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-6 col-md-6 col-lg-4">
+						<div class="footer__pdfs">
+							<a href="#" target="_blank">Политика конфеденциальности</a>
+							<a href="#" target="_blank">Использование cookies</a>
+							<a href="#" target="_blank">Оферта</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
