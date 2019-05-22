@@ -1,0 +1,33 @@
+/* Страница: Новости (список) */
+// Секция с карточками новостей
+.s-new-list-cards
+	&__col
+		margin-bottom: 30px
+		&:nth-last-child(1),
+		&:nth-last-child(2),
+		&:nth-last-child(3),
+		&:nth-last-child(4)
+			margin-bottom: 0
+	&__card
+		height: 100%
+
++media(md)
+	.s-new-list-cards
+		padding-left: 10px
+		padding-right: 10px
+		&__col
+			margin-bottom: 20px
+			&:nth-last-child(3),
+			&:nth-last-child(4)
+				margin-bottom: 20px
+			&:nth-last-child(1),
+			&:nth-last-child(2)
+				margin-bottom: 0
+
++media(sm)
+	.s-new-list-cards
+		padding-left: 15px
+		padding-right: 15px
+		&__col
+			&:nth-last-child(2)
+				margin-bottom: 20px
