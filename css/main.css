@@ -4615,3 +4615,32 @@ a.sm-text:hover, a.more-link__text:hover {
 		padding-right: 15px;
 	}
 }
+
+/* Страница: Отрасли (список) */
+.s-industry-list-cards__col {
+	margin-bottom: 30px;
+}
+
+.s-industry-list-cards__col:nth-last-child(2), .s-industry-list-cards__col:nth-last-child(1) {
+	margin-bottom: 0;
+}
+
+.s-industry-list-cards__card {
+	height: 100%;
+}
+
+@media (max-width: 999.98px) {
+	.s-industry-list-cards__col {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.s-industry-list-cards__col {
+		margin-bottom: 10px;
+	}
+
+	.s-industry-list-cards__col:nth-last-child(2) {
+		margin-bottom: 10px;
+	}
+}
