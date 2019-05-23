@@ -62,7 +62,7 @@ $(function() {
 		btnClass: 'js-tgl-product-popup'
 	});
 
-	var sliderPopup = window.initSliderPopup('slider-popup');
+	var sliderPopup = window.initSliderPopup('b-photo-slider');
 	
 	// Масонри на гридах
 	function resizeGridItem($item) {

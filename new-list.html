@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
+
+	<title>Новости (список)</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-		<title>Новости (список)</title>
-		<meta name="description" content="">
+	<meta property="og:image" content="path/to/image.jpg">
 	
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<meta property="og:image" content="path/to/image.jpg">
-		
-		<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
-		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-		
-		<link rel="stylesheet" href="css/reboot.css">
-		<link rel="stylesheet" href="css/main.css">
-		
-		<script src="js/libs/jquery-3.2.1.min.js"></script>
-		<script src="js/libs/jquery.switchPopup.js"></script>
-		<script src="js/common.js"></script>
-		<script src="js/b-card-navs.js"></script>
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	
+	<link rel="stylesheet" href="css/reboot.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="js/libs/jquery-3.2.1.min.js"></script>
+	<script src="js/libs/jquery.smoothscroll.js"></script>
+	<script src="js/libs/jquery.switchPopup.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/b-card-navs.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -280,8 +281,8 @@
 		</div>
 	</header>
 	
-	<main class="main p-new-list">
-		<section class="p-new-list__head s-head">
+	<main class="main">
+		<section class="s-head">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
@@ -293,7 +294,7 @@
 			</div>
 		</section>
 
-		<section class="p-new-list__navs s-navs">
+		<section class="s-navs">
 			<div class="container">
 				<div class="s-navs__list b-card-navs">
 					<button class="b-card-navs__btn active" data-filter="fl-all">Все</button>
@@ -303,11 +304,11 @@
 			</div>
 		</section>
 
-		<section class="p-new-list__cards s-new-list-cards">
+		<section class="s-default">
 			<div class="container">
-				<div class="row">
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+				<div class="s-default__row_lg_4 s-default__md_2 s-default__sm_1 row">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -317,16 +318,16 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__content">
 								<h4 class="b-new__title h4">Подводим итоги года вместе с вами</h4>
 								<span class="b-new__date sm-text">09.01.2019 / Проекты</span>
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -336,8 +337,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -347,8 +348,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-1">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-1">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -358,16 +359,16 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__content">
 								<h4 class="b-new__title h4">Подводим итоги года вместе с вами</h4>
 								<span class="b-new__date sm-text">09.01.2019 / Проекты</span>
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-1">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-1">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -377,8 +378,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -388,8 +389,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -399,16 +400,16 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__content">
 								<h4 class="b-new__title h4">Подводим итоги года вместе с вами</h4>
 								<span class="b-new__date sm-text">09.01.2019 / Проекты</span>
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -418,8 +419,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -429,8 +430,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -440,16 +441,16 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__content">
 								<h4 class="b-new__title h4">Подводим итоги года вместе с вами</h4>
 								<span class="b-new__date sm-text">09.01.2019 / Проекты</span>
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-2">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-2">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -459,8 +460,8 @@
 							</div>
 						</a>
 					</div>
-					<div class="s-new-list-cards__col col-6 col-md-3 col-lg-2 fl-all fl-type-1">
-						<a href="#" class="s-new-list-cards__card b-new b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col fl-all fl-type-1">
+						<a href="#" class="s-default__card b-new b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-new__img-wrap">
 								<img src="content/home-news/news-img.png" class="b-new__img">
 							</div>
@@ -474,7 +475,7 @@
 			</div>
 		</section>
 
-		<section class="p-new-list__more s-load-more">
+		<section class="s-load-more">
 			<div class="container">
 				<div class="s-load-more__btn-wrap">
 					<button class="s-load-more__btn btn btn_white btn_icon_left">
@@ -484,7 +485,6 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
 	
 	<footer class="footer">

@@ -1,5 +1,5 @@
 //
-// SmoothScroll for websites v1.4.6 (Balazs Galambosi)
+// SmoothScroll for websites v1.4.9 (Balazs Galambosi)
 // http://www.smoothscroll.net/
 //
 // Licensed under the terms of the MIT license.
@@ -14,7 +14,7 @@
 //
 
 (function () {
-  
+
 // Scroll Variables (tweakable)
 var defaultOptions = {
 
@@ -55,6 +55,7 @@ var activeElement;
 var observer;
 var refreshSize;
 var deltaBuffer = [];
+var deltaBufferTimer;
 var isMac = /^Mac/.test(navigator.platform);
 
 var key = { left: 37, up: 38, right: 39, down: 40, spacebar: 32, 
@@ -78,7 +79,7 @@ function initTest() {
  * Sets up scrolls array, determines if frames are involved.
  */
 function init() {
-  
+    
     if (initDone || !document.body) return;
 
     initDone = true;
@@ -106,14 +107,14 @@ function init() {
      * on some pages. e.g.: html, body { height: 100% }
      */
     else if (isOldSafari &&
-             scrollHeight > windowHeight &&
+                scrollHeight > windowHeight &&
             (body.offsetHeight <= windowHeight || 
-             html.offsetHeight <= windowHeight)) {
+                html.offsetHeight <= windowHeight)) {
 
         var fullPageElem = document.createElement('div');
         fullPageElem.style.cssText = 'position:absolute; z-index:-10000; ' +
-                                     'top:0; left:0; right:0; height:' + 
-                                      root.scrollHeight + 'px';
+                                        'top:0; left:0; right:0; height:' + 
+                                        root.scrollHeight + 'px';
         document.body.appendChild(fullPageElem);
         
         // DOM changed (throttled) to fix height
@@ -127,7 +128,7 @@ function init() {
                 pendingRefresh = null;
             }, 500); // act rarely to stay fast
         };
-  
+    
         setTimeout(refreshSize, 10);
 
         addEvent('resize', refreshSize);
@@ -173,7 +174,7 @@ function cleanup() {
 /************************************************
  * SCROLLING 
  ************************************************/
- 
+    
 var que = [];
 var pending = false;
 var lastScroll = Date.now();
@@ -213,8 +214,16 @@ function scrollArray(elem, left, top) {
         return;
     }  
 
-    var scrollWindow = (elem === document.body);
+    var scrollRoot = getScrollRoot();
+    var isWindowScroll = (elem === scrollRoot || elem === document.body);
     
+    // if we haven't already fixed the behavior, 
+    // and it needs fixing for this sesh
+    if (elem.$scrollBehavior == null && isScrollBehaviorSmooth(elem)) {
+        elem.$scrollBehavior = elem.style.scrollBehavior;
+        elem.style.scrollBehavior = 'auto';
+    }
+
     var step = function (time) {
         
         var now = Date.now();
@@ -254,7 +263,7 @@ function scrollArray(elem, left, top) {
         }
 
         // scroll left and top
-        if (scrollWindow) {
+        if (isWindowScroll) {
             window.scrollBy(scrollX, scrollY);
         } 
         else {
@@ -271,6 +280,11 @@ function scrollArray(elem, left, top) {
             requestFrame(step, elem, (1000 / options.frameRate + 1)); 
         } else { 
             pending = false;
+            // restore default behavior at the end of scrolling sesh
+            if (elem.$scrollBehavior != null) {
+                elem.style.scrollBehavior = elem.$scrollBehavior;
+                elem.$scrollBehavior = null;
+            }
         }
     };
     
@@ -304,7 +318,7 @@ function wheel(event) {
     
     // leave embedded content alone (flash & pdf)
     if (isNodeName(activeElement, 'embed') || 
-       (isNodeName(target, 'embed') && /\.pdf/i.test(target.src)) ||
+        (isNodeName(target, 'embed') && /\.pdf/i.test(target.src)) ||
         isNodeName(activeElement, 'object') ||
         target.shadowRoot) {
         return true;
@@ -375,7 +389,7 @@ function keydown(event) {
 
     var target   = event.target;
     var modifier = event.ctrlKey || event.altKey || event.metaKey || 
-                  (event.shiftKey && event.keyCode !== key.spacebar);
+                    (event.shiftKey && event.keyCode !== key.spacebar);
     
     // our own tracked active element could've been removed from the DOM
     if (!document.body.contains(activeElement)) {
@@ -389,26 +403,26 @@ function keydown(event) {
     var inputNodeNames = /^(textarea|select|embed|object)$/i;
     var buttonTypes = /^(button|submit|radio|checkbox|file|color|image)$/i;
     if ( event.defaultPrevented ||
-         inputNodeNames.test(target.nodeName) ||
-         isNodeName(target, 'input') && !buttonTypes.test(target.type) ||
-         isNodeName(activeElement, 'video') ||
-         isInsideYoutubeVideo(event) ||
-         target.isContentEditable || 
-         modifier ) {
-      return true;
+            inputNodeNames.test(target.nodeName) ||
+            isNodeName(target, 'input') && !buttonTypes.test(target.type) ||
+            isNodeName(activeElement, 'video') ||
+            isInsideYoutubeVideo(event) ||
+            target.isContentEditable || 
+            modifier ) {
+        return true;
     }
 
     // [spacebar] should trigger button press, leave it alone
     if ((isNodeName(target, 'button') ||
-         isNodeName(target, 'input') && buttonTypes.test(target.type)) &&
+            isNodeName(target, 'input') && buttonTypes.test(target.type)) &&
         event.keyCode === key.spacebar) {
-      return true;
+        return true;
     }
 
     // [arrwow keys] on radio buttons should be left alone
     if (isNodeName(target, 'input') && target.type == 'radio' &&
         arrowKeys[event.keyCode])  {
-      return true;
+        return true;
     }
     
     var shift, x = 0, y = 0;
@@ -444,6 +458,8 @@ function keydown(event) {
             y = clientHeight * 0.9;
             break;
         case key.home:
+            if (overflowing == document.body && document.scrollingElement)
+                overflowing = document.scrollingElement;
             y = -overflowing.scrollTop;
             break;
         case key.end:
@@ -485,20 +501,29 @@ var uniqueID = (function () {
     };
 })();
 
-var cache = {}; // cleared out after a scrolling session
+var cacheX = {}; // cleared out after a scrolling session
+var cacheY = {}; // cleared out after a scrolling session
 var clearCacheTimer;
+var smoothBehaviorForElement = {};
 
 //setInterval(function () { cache = {}; }, 10 * 1000);
 
 function scheduleClearCache() {
     clearTimeout(clearCacheTimer);
-    clearCacheTimer = setInterval(function () { cache = {}; }, 1*1000);
+    clearCacheTimer = setInterval(function () { 
+        cacheX = cacheY = smoothBehaviorForElement = {}; 
+    }, 1*1000);
 }
 
-function setCache(elems, overflowing) {
+function setCache(elems, overflowing, x) {
+    var cache = x ? cacheX : cacheY;
     for (var i = elems.length; i--;)
         cache[uniqueID(elems[i])] = overflowing;
     return overflowing;
+}
+
+function getCache(el, x) {
+    return (x ? cacheX : cacheY)[uniqueID(el)];
 }
 
 //  (body)                (root)
@@ -513,7 +538,7 @@ function overflowingAncestor(el) {
     var body = document.body;
     var rootScrollHeight = root.scrollHeight;
     do {
-        var cached = cache[uniqueID(el)];
+        var cached = getCache(el, false);
         if (cached) {
             return setCache(elems, cached);
         }
@@ -522,13 +547,13 @@ function overflowingAncestor(el) {
             var topOverflowsNotHidden = overflowNotHidden(root) && overflowNotHidden(body);
             var isOverflowCSS = topOverflowsNotHidden || overflowAutoOrScroll(root);
             if (isFrame && isContentOverflowing(root) || 
-               !isFrame && isOverflowCSS) {
+                !isFrame && isOverflowCSS) {
                 return setCache(elems, getScrollRoot()); 
             }
         } else if (isContentOverflowing(el) && overflowAutoOrScroll(el)) {
             return setCache(elems, el);
         }
-    } while (el = el.parentElement);
+    } while ((el = el.parentElement));
 }
 
 function isContentOverflowing(el) {
@@ -547,21 +572,31 @@ function overflowAutoOrScroll(el) {
     return (overflow === 'scroll' || overflow === 'auto');
 }
 
+// for all other elements
+function isScrollBehaviorSmooth(el) {
+    var id = uniqueID(el);
+    if (smoothBehaviorForElement[id] == null) {
+        var scrollBehavior = getComputedStyle(el, '')['scroll-behavior'];
+        smoothBehaviorForElement[id] = ('smooth' == scrollBehavior);
+    }
+    return smoothBehaviorForElement[id];
+}
+
 
 /***********************************************
  * HELPERS
  ***********************************************/
 
-function addEvent(type, fn) {
-    window.addEventListener(type, fn, false);
+function addEvent(type, fn, arg) {
+    window.addEventListener(type, fn, arg || false);
 }
 
-function removeEvent(type, fn) {
-    window.removeEventListener(type, fn, false);  
+function removeEvent(type, fn, arg) {
+    window.removeEventListener(type, fn, arg || false);  
 }
 
 function isNodeName(el, tag) {
-    return (el.nodeName||'').toLowerCase() === tag.toLowerCase();
+    return el && (el.nodeName||'').toLowerCase() === tag.toLowerCase();
 }
 
 function directionCheck(x, y) {
@@ -574,8 +609,6 @@ function directionCheck(x, y) {
         lastScroll = 0;
     }
 }
-
-var deltaBufferTimer;
 
 if (window.localStorage && localStorage.SS_deltaBuffer) {
     try { // #46 Safari throws in private browsing for localStorage 
@@ -597,7 +630,8 @@ function isTouchpad(deltaY) {
             localStorage.SS_deltaBuffer = deltaBuffer.join(',');
         } catch (e) { }  
     }, 1000);
-    return !allDeltasDivisableBy(120) && !allDeltasDivisableBy(100);
+    var dpiScaledWheelDelta = deltaY > 120 && allDeltasDivisableBy(deltaY); // win64 
+    return !allDeltasDivisableBy(120) && !allDeltasDivisableBy(100) && !dpiScaledWheelDelta;
 } 
 
 function isDivisible(n, divisor) {
@@ -616,20 +650,20 @@ function isInsideYoutubeVideo(event) {
     if (document.URL.indexOf ('www.youtube.com/watch') != -1) {
         do {
             isControl = (elem.classList && 
-                         elem.classList.contains('html5-video-controls'));
+                            elem.classList.contains('html5-video-controls'));
             if (isControl) break;
-        } while (elem = elem.parentNode);
+        } while ((elem = elem.parentNode));
     }
     return isControl;
 }
 
 var requestFrame = (function () {
-      return (window.requestAnimationFrame       || 
-              window.webkitRequestAnimationFrame || 
-              window.mozRequestAnimationFrame    ||
-              function (callback, element, delay) {
-                 window.setTimeout(callback, delay || (1000/60));
-             });
+        return (window.requestAnimationFrame       || 
+                window.webkitRequestAnimationFrame || 
+                window.mozRequestAnimationFrame    ||
+                function (callback, element, delay) {
+                    window.setTimeout(callback, delay || (1000/60));
+                });
 })();
 
 var MutationObserver = (window.MutationObserver || 
@@ -637,31 +671,31 @@ var MutationObserver = (window.MutationObserver ||
                         window.MozMutationObserver);  
 
 var getScrollRoot = (function() {
-  var SCROLL_ROOT;
-  return function() {
+    var SCROLL_ROOT = document.scrollingElement;
+    return function() {
     if (!SCROLL_ROOT) {
-      var dummy = document.createElement('div');
-      dummy.style.cssText = 'height:10000px;width:1px;';
-      document.body.appendChild(dummy);
-      var bodyScrollTop  = document.body.scrollTop;
-      var docElScrollTop = document.documentElement.scrollTop;
-      window.scrollBy(0, 3);
-      if (document.body.scrollTop != bodyScrollTop)
+        var dummy = document.createElement('div');
+        dummy.style.cssText = 'height:10000px;width:1px;';
+        document.body.appendChild(dummy);
+        var bodyScrollTop  = document.body.scrollTop;
+        var docElScrollTop = document.documentElement.scrollTop;
+        window.scrollBy(0, 3);
+        if (document.body.scrollTop != bodyScrollTop)
         (SCROLL_ROOT = document.body);
-      else 
+        else 
         (SCROLL_ROOT = document.documentElement);
-      window.scrollBy(0, -3);
-      document.body.removeChild(dummy);
+        window.scrollBy(0, -3);
+        document.body.removeChild(dummy);
     }
     return SCROLL_ROOT;
-  };
+    };
 })();
 
 
 /***********************************************
  * PULSE (by Michael Herf)
  ***********************************************/
- 
+    
 /**
  * Viscous fluid with a pulse for part and decay for the rest.
  * - Applies a fixed force over an interval (a damped acceleration), and
@@ -709,14 +743,20 @@ var isIEWin7  = /Windows NT 6.1/i.test(userAgent) && /rv:11/i.test(userAgent);
 var isOldSafari = isSafari && (/Version\/8/i.test(userAgent) || /Version\/9/i.test(userAgent));
 var isEnabledForBrowser = (isChrome || isSafari || isIEWin7) && !isMobile;
 
-var wheelEvent;
-if ('onwheel' in document.createElement('div'))
-    wheelEvent = 'wheel';
-else if ('onmousewheel' in document.createElement('div'))
-    wheelEvent = 'mousewheel';
+var supportsPassive = false;
+try {
+    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () {
+            supportsPassive = true;
+        } 
+    }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel'; 
 
 if (wheelEvent && isEnabledForBrowser) {
-    addEvent(wheelEvent, wheel);
+    addEvent(wheelEvent, wheel, wheelOpt);
     addEvent('mousedown', mousedown);
     addEvent('load', init);
 }

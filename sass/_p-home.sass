@@ -65,17 +65,6 @@
 		&::after
 			display: none
 
-// Секция с новостями
-+media(md)
-	.s-home-news
-		&__col
-			margin-bottom: 20px
-			&:nth-last-child(1),
-			&:nth-last-child(2)
-				margin-bottom: 30px
-		&__card
-			height: 100%
-
 // Карточка новости
 .b-new
 	$p: &
@@ -167,23 +156,6 @@
 		&__img-wrap
 			margin: 0 0 21px
 
-// Секция отраслей
-+media(md)
-	.s-home-industry
-		&__col
-			margin-bottom: 20px
-			&:nth-last-child(1),
-			&:nth-last-child(2)
-				margin-bottom: 0
-		&__card
-			height: 100%
-
-+media(sm)
-	.s-home-industry
-		&__col
-			&:nth-last-child(2)
-				margin-bottom: 20px
-
 // Карточка отрасли
 .b-industry
 	$p: &
@@ -264,30 +236,6 @@
 	align-items: center
 	width: 126px
 	height: 100px
-
-// Секция с решениями
-.s-home-solutions
-	&__col
-		margin-bottom: 30px
-		&:nth-last-child(1),
-		&:nth-last-child(2)
-			margin-bottom: 0
-	&__card
-		height: 100%
-
-+media(sm)
-	.s-home-solutions
-		&__col
-			margin-bottom: 20px
-			&:nth-last-child(1),
-			&:nth-last-child(2)
-				margin-bottom: 0
-
-+media(sm)
-	.s-home-solutions
-		&__col
-			&:nth-last-child(2)
-				margin-bottom: 20px
 
 // Блок с решением
 .b-solution

@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
+
+	<title>Каталог</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-		<title>Каталог</title>
-		<meta name="description" content="">
+	<meta property="og:image" content="path/to/image.jpg">
 	
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<meta property="og:image" content="path/to/image.jpg">
-		
-		<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
-		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-		
-		<link rel="stylesheet" href="css/reboot.css">
-		<link rel="stylesheet" href="css/main.css">
-		
-		<script src="js/libs/jquery-3.2.1.min.js"></script>
-		<script src="js/libs/jquery.switchPopup.js"></script>
-		<script src="js/common.js"></script>
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	
+	<link rel="stylesheet" href="css/reboot.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="js/libs/jquery-3.2.1.min.js"></script>
+	<script src="js/libs/jquery.smoothscroll.js"></script>
+	<script src="js/libs/jquery.switchPopup.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -279,8 +280,8 @@
 		</div>
 	</header>
 	
-	<main class="main p-catalog">
-		<section class="p-catalog__head s-head">
+	<main class="main">
+		<section class="s-head">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
@@ -292,11 +293,11 @@
 			</div>
 		</section>
 
-		<section class="p-catalog__category s-catalog-category">
+		<section class="s-catalog-category s-default">
 			<div class="container">
-				<div class="row">
-					<div class="s-catalog-category__col">
-						<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
+				<div class="s-default__row_lg_3 s-default__row_md_2 s-default__row_sm_1 row">
+					<div class="s-default__col">
+						<a href="#" class="s-default__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-industry__icon">
 								<div class="b-border-icon">
 									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
@@ -306,8 +307,8 @@
 							<h3 class="b-industry__title h3">Чехлы со сканером ШК для Apple</h3>
 						</a>
 					</div>
-					<div class="s-catalog-category__col">
-						<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col">
+						<a href="#" class="s-default__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-industry__icon">
 								<div class="b-border-icon">
 									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
@@ -317,8 +318,8 @@
 							<h3 class="b-industry__title h3">Терминалы сбора данных</h3>
 						</a>
 					</div>
-					<div class="s-catalog-category__col">
-						<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col">
+						<a href="#" class="s-default__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-industry__icon">
 								<div class="b-border-icon">
 									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
@@ -328,8 +329,8 @@
 							<h3 class="b-industry__title h3">Сканеры ШК</h3>
 						</a>
 					</div>
-					<div class="s-catalog-category__col">
-						<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col">
+						<a href="#" class="s-default__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-industry__icon">
 								<div class="b-border-icon">
 									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
@@ -339,8 +340,8 @@
 							<h3 class="b-industry__title h3">Платежные терминалы</h3>
 						</a>
 					</div>
-					<div class="s-catalog-category__col">
-						<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col">
+						<a href="#" class="s-default__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-industry__icon">
 								<div class="b-border-icon">
 									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
@@ -350,8 +351,8 @@
 							<h3 class="b-industry__title h3">Принтеры чеков и этикеток</h3>
 						</a>
 					</div>
-					<div class="s-catalog-category__col">
-						<a href="#" class="home-industry__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
+					<div class="s-default__col">
+						<a href="#" class="s-default__card b-industry b-styled b-styled_bg_white b-styled_color_gray">
 							<div class="b-industry__icon">
 								<div class="b-border-icon">
 									<img src="img/ramka.svg" class="b-border-icon__border img-svg">
@@ -364,7 +365,6 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
 	
 	<footer class="footer">
