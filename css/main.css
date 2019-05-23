@@ -2775,6 +2775,10 @@ a.sm-text:hover, a.more-link__text:hover {
 	text-align: center;
 }
 
+.s-load-more_no-pb {
+	padding-bottom: 0;
+}
+
 @media (max-width: 999.98px) {
 	.s-load-more {
 		padding: 35px 0 43px;
@@ -4643,4 +4647,74 @@ a.sm-text:hover, a.more-link__text:hover {
 	.s-industry-list-cards__col:nth-last-child(2) {
 		margin-bottom: 10px;
 	}
+}
+
+/* Страница: Решение (одно) */
+.s-solition-info-head {
+	padding: 105px 0;
+	background-position: 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.s-solition-info-head__title-wrap {
+	text-align: center;
+}
+
+.s-solition-info-head__title {
+	margin: 0;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.s-solition-info-head__subtitle {
+	display: block;
+	margin-top: 19px;
+	color: #ffffff;
+}
+
+.s-solition-info-desc__back {
+	margin-bottom: 30px;
+}
+
+.s-solition-info-desc__content {
+	margin: 0 0 52px;
+}
+
+.s-solition-info-desc__btn {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-bottom: -20px;
+}
+
+.s-solition-info-desc__send, .s-solition-info-desc__download {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 50%;
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 999.98px) {
+	.s-solition-info-desc__send, .s-solition-info-desc__download {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+.s-solition-accordion {
+	padding-bottom: 60px;
 }
