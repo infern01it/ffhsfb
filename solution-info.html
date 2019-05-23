@@ -26,7 +26,7 @@
 	<script src="js/libs/slick.min.js"></script>
 	<script src="js/libs/jquery.switchPopup.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/b-slider-popup.js"></script>
+	<script src="js/b-photo-slider.js"></script>
 	<script src="js/p-solution-info.js"></script>
 	<script src="js/b-accordion.js"></script>
 </head>
@@ -336,24 +336,24 @@
 		</section>
 
 		<section class="s-default s-default_p s-photo">
-			<div class="s-photo__slider slider-popup">
-				<div class="slider-popup__slick">
-					<div class="slider-popup__item">
-						<img src="/content/slider/img-1.png" class="slider-popup__img slider-popup__img_full">
+			<div class="s-photo__slider b-photo-slider">
+				<div class="b-photo-slider__slick">
+					<div class="b-photo-slider__item">
+						<img src="content/slider/img-1.png" class="b-photo-slider__img b-photo-slider__img_full">
 					</div>
-					<div class="slider-popup__item">
-						<img src="/content/slider/img-2.png" class="slider-popup__img slider-popup__img_full">
+					<div class="b-photo-slider__item">
+						<img src="content/slider/img-2.png" class="b-photo-slider__img b-photo-slider__img_full">
 					</div>
-					<div class="slider-popup__item">
-						<img src="/content/slider/img-3.png" class="slider-popup__img slider-popup__img_full">
+					<div class="b-photo-slider__item">
+						<img src="content/slider/img-3.png" class="b-photo-slider__img b-photo-slider__img_full">
 					</div>
 				</div>
-				<button class="slider-popup__arrow slider-popup__arrow_left"></button>
-				<button class="slider-popup__arrow slider-popup__arrow_right"></button>
+				<button class="b-photo-slider__arrow b-photo-slider__arrow_left"></button>
+				<button class="b-photo-slider__arrow b-photo-slider__arrow_right"></button>
 			</div>
 			<script>
 				$(function() {
-					window.initSliderPopup('slider-popup');
+					window.initSliderPopup('b-photo-slider');
 				});
 			</script>
 		</section>
