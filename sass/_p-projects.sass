@@ -1,28 +1,6 @@
 /* Страница: Проекты (список) */
-// Секция с карточками проектов
-.s-project-list-cards
-	&__col
-		margin-bottom: 30px
-		&:nth-last-child(1),
-		&:nth-last-child(2)
-			margin-bottom: 0
-	&__card
-		height: 100%
 
-+media(md)
-	.s-project-list-cards
-		padding-left: 10px
-		padding-right: 10px
-
-+media(sm)
-	.s-project-list-cards
-		padding-left: 15px
-		padding-right: 15px
-		&__col
-			margin-bottom: 20px
-			&:nth-last-child(2)
-				margin-bottom: 20px
-
+// Каточка навигации
 .b-card-navs
 	display: flex
 	justify-content: center
@@ -49,50 +27,10 @@
 		&:hover, &:focus, &:active
 			border-color: #1a1a1a
 
+/* Страница: Проект (один) */
+
 .s-project-info-desc
 	&__image
 		img
 			width: 100%
 			height: auto
-
-.s-project-info-category
-	&__col
-		+b4col(33.3333%)
-		padding-left: 15px
-		padding-right: 15px
-		margin-bottom: 30px
-		&:nth-last-child(1),
-		&:nth-last-child(2),
-		&:nth-last-child(3)
-			margin-bottom: 0
-
-+media(md)
-	.s-project-info-category
-		&__col
-			+b4col(50%)
-			padding-left: 10px
-			padding-right: 10px
-			margin-bottom: 20px
-			&:nth-last-child(3)
-				margin-bottom: 20px
-
-+media(sm)
-	.s-project-info-category
-		&__col
-			+b4col(100%)
-			padding-left: 5px
-			padding-right: 5px
-			margin-bottom: 10px
-			&:nth-last-child(2),
-			&:nth-last-child(3)
-				margin-bottom: 10px
-
-// Секция "Применяется в решениях"
-.s-project-info-solutions
-	&__col
-		margin-bottom: 30px
-		&:nth-last-child(1),
-		&:nth-last-child(2):not(:nth-child(even))
-			margin-bottom: 0
-	&__card
-		height: 100%

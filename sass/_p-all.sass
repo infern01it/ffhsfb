@@ -29,7 +29,6 @@
 // Стандартная секция
 .s-default
 	$p: &
-	padding-top: 135px
 	&__title-wrap
 		text-align: center
 		margin: 0 0 127px
@@ -41,23 +40,153 @@
 		background-color: #242424
 		#{$p}__title
 			color: #ffffff
+	&_p
+		padding-top: 135px
+		padding-bottom: 176px
+	&_pt
+		padding-top: 135px
 	&_pb
 		padding-bottom: 176px
+	&__card
+		height: 100%
+
++media-only(lg)
+	.s-default
+		$p: &
+		&__col
+			padding-left: 15px
+			padding-right: 15px
+			margin-bottom: 30px
+		&__row_lg
+			&_2
+				#{$p}
+					&__col
+						+b4col(50%)
+						&:nth-last-child(1),
+						&:nth-last-child(2):not(:nth-child(even))
+							margin-bottom: 0
+			&_3
+				#{$p}
+					&__col
+						+b4col(33.3333%)
+						&:nth-last-child(1),
+						&:nth-last-child(2),
+						&:nth-last-child(3)
+							margin-bottom: 0
+			&_4
+				#{$p}
+					&__col
+						+b4col(25%)
+						&:nth-last-child(1),
+						&:nth-last-child(2),
+						&:nth-last-child(3),
+						&:nth-last-child(4)
+							margin-bottom: 0
+			&_5
+				#{$p}
+					&__col
+						+b4col(20%)
+						&:nth-last-child(1),
+						&:nth-last-child(2),
+						&:nth-last-child(3),
+						&:nth-last-child(4),
+						&:nth-last-child(5)
+							margin-bottom: 0
+			&_1, &_2, &_3, &_4, &_5
+				#{$p}
+					&__col_100
+						+b4col(100%)
 
 +media(md)
 	.s-default
-		padding-top: 70px
 		padding-left: 10px
 		padding-right: 10px
 		&__title-wrap
 			margin: 0 0 39px
+		&__more
+			margin-top: 30px
+		&_p
+			padding-top: 70px
+			padding-bottom: 68px
+		&_pt
+			padding-top: 70px
 		&_pb
 			padding-bottom: 68px
+
++media-only(md)
+	.s-default
+		$p: &
+		&__col
+			margin-bottom: 20px
+			padding-left: 10px
+			padding-right: 10px
+		&__row_md
+			&_2
+				#{$p}
+					&__col
+						+b4col(50%)
+						&:nth-last-child(3),
+						&:nth-last-child(4),
+						&:nth-last-child(5)
+							margin-bottom: 20px
+						&:nth-last-child(1),
+						&:nth-last-child(2):not(:nth-child(even))
+							margin-bottom: 0
+			&_3
+				#{$p}
+					&__col
+						+b4col(33.3333%)
+						&:nth-last-child(4),
+						&:nth-last-child(5)
+							margin-bottom: 20px
+						&:nth-last-child(1),
+						&:nth-last-child(2),
+						&:nth-last-child(3)
+							margin-bottom: 0
+			&_1, &_2, &_3, &_4, &_5
+				#{$p}
+					&__col_100
+						+b4col(100%)
 
 +media(sm)
 	.s-default
 		padding-left: 15px
 		padding-right: 15px
+
++media-only(sm)
+	.s-default
+		$p: &
+		&__col
+			margin-bottom: 10px
+			padding-left: 5px
+			padding-right: 5px
+		&__row_sm
+			&_1
+				#{$p}
+					&__col
+						+b4col(100%)
+						&:nth-last-child(2),
+						&:nth-last-child(3),
+						&:nth-last-child(4),
+						&:nth-last-child(5)
+							margin-bottom: 10px
+						&:nth-last-child(1)
+							margin-bottom: 0
+			&_2
+				#{$p}
+					&__col
+						+b4col(50%)
+						&:nth-last-child(3),
+						&:nth-last-child(4),
+						&:nth-last-child(5)
+							margin-bottom: 10px
+						&:nth-last-child(1),
+						&:nth-last-child(2):not(:nth-child(even))
+							margin-bottom: 0
+			&_1, &_2, &_3, &_4, &_5
+				#{$p}
+					&__col_100
+						+b4col(100%)
 
 // Секция с линией разделяющими секции
 .s-line
@@ -318,3 +447,16 @@
 +media(md)
 	.s-load-more
 		padding: 35px 0 43px
+
+// Секция "Фото галерея"
++media(md)
+	.s-photo
+		&__slider
+			margin-right: -10px
+			margin-left: -10px
+
++media(sm)
+	.s-photo
+		&__slider
+			margin-right: -15px
+			margin-left: -15px

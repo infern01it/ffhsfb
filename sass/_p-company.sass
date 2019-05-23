@@ -1,28 +1,5 @@
 
 /* Страница "О компании" */
-+media(md)
-	.p-company-about
-		&__head,
-		&__desc,
-		&__competencies,
-		&__solutions,
-		&__photo,
-		&__customers,
-		&__next
-			padding-left: 10px
-			padding-right: 10px
-
-+media(sm)
-	.p-company-about
-		&__head,
-		&__desc,
-		&__competencies,
-		&__solutions,
-		&__photo,
-		&__customers,
-		&__next
-			padding-left: 15px
-			padding-right: 15px
 
 // Секция "Наши компетенции"
 .s-company-about-competencies
@@ -56,54 +33,11 @@
 		text-align: center
 		color: #1a1a1a
 
-// Секция "Наши решения"
-.s-company-about-solutions
-	&__col
-		margin-bottom: 30px
-		&:nth-last-child(1),
-		&:nth-last-child(2)
-			margin-bottom: 0
-	&__card
-		height: 100%
-
-+media(sm)
-	.s-company-about-solutions
-		&__col
-			margin-bottom: 20px
-			&:nth-last-child(2)
-				margin-bottom: 20px
-
-// Секция "О нас в фотографиях"
 +media(md)
-	.s-company-about-photo
-		&__slider
-			margin-right: -10px
-			margin-left: -10px
-
-+media(sm)
-	.s-company-about-photo
-		&__slider
-			margin-right: -15px
-			margin-left: -15px
+	.b-competencie
+		padding-bottom: 30px
 
 /* Страница: Компания - Партнеры */
-// Секция с карточками партнёров
-.s-company-partners-cards
-	&__col
-		margin-bottom: 30px
-		&:nth-last-child(1),
-		&:nth-last-child(2)
-			margin-bottom: 0
-	&__card
-		height: 100%
-
-+media(sm)
-	.s-company-partners-cards
-		&__col
-			margin-bottom: 20px
-			&:nth-last-child(2)
-				margin-bottom: 20px
-
 // Каточка партнера
 .b-partner
 	padding: 26px 50px 38px
