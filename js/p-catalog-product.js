@@ -65,7 +65,7 @@ $(function() {
 	var sliderPopup = window.initSliderPopup('slider-popup');
 	
 	// Масонри на гридах
-	function resizeGridItem($item){
+	function resizeGridItem($item) {
 		var $grid = $('.product-specifications__grid');
 		rowHeight = parseInt($grid.css('grid-auto-rows'));
 		rowGap = parseInt($grid.css('grid-row-gap'));
@@ -73,7 +73,7 @@ $(function() {
 		$item[0].style.gridRowEnd = "span "+rowSpan;
 	}
 
-	function resizeAllGridItems(){
+	function resizeAllGridItems() {
 		$(".product-specifications__col").each(function(id, el) {
 			resizeGridItem($(el));
 		});
