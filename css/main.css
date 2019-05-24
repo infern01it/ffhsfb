@@ -241,6 +241,10 @@ a.sm-text:hover, a.more-link__text:hover {
 	border-radius: 1px;
 }
 
+.b-content a {
+	color: #1a1a1a;
+}
+
 .b-styled {
 	position: relative;
 	-webkit-transition: all .2s ease-out;
