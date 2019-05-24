@@ -1,0 +1,93 @@
+.s-contact-desc
+	&__col
+		&_1
+		&_2
+
+.s-ymap
+	&__map
+		width: 100%
+		height: 506px
+
+.b-form
+	&__field
+		margin: 0 0 40px
+	&__politconf
+		margin: 0 0 28px
+
+.formfield
+	$p: &
+	&_error
+		#{$p}
+			&__msg
+				display: block
+			&__input,
+			&__textarea
+				border-color: $ac
+	&__label
+		margin: 0 0 14px
+		font-size: 14px
+		line-height: 12px
+		span
+			font-family: 'GothamPro'
+			font-weight: 700
+			color: $ac
+	&__input
+		height: 44px
+		padding: 0 20px
+	&__textarea
+		min-height: 95px
+		padding: 12px 20px
+	&__input,
+	&__textarea
+		width: 100%
+		background-color: #ffffff
+		border: solid 1px #474747
+		outline: none !important
+		font-size: 14px
+		line-height: 22px
+		+placeholder
+			opacity: 0.5
+	&__msg
+		color: $ac
+		display: none
+
+.formcheck
+	$p: &
+	position: relative
+	padding-left: 34px
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		width: 1px
+		height: 1px
+		opacity: 0
+		&:checked + #{$p}__label::after
+			opacity: 1
+	&__label
+		margin: 0
+		font-size: 11px
+		line-height: 22px
+		letter-spacing: 0.46px
+		color: #474747
+		&::before,
+		&::after
+			content: ''
+			display: block
+			width: 20px
+			height: 20px
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			background-position: 50% 50%
+			background-repeat: no-repeat
+		&::before
+			background-image: url('#{$url-img}/check-out.svg')
+		&::after
+			background-image: url('#{$url-img}/check-in.svg')
+			opacity: 0
+			transition: all .2s ease-in-out
+		a
+			color: #474747
+			text-decoration: underline

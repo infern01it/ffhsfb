@@ -4417,3 +4417,132 @@ a.sm-text:hover, a.more-link__text:hover {
 .s-solution-accordion {
 	padding-bottom: 60px;
 }
+
+.s-ymap__map {
+	width: 100%;
+	height: 506px;
+}
+
+.b-form__field {
+	margin: 0 0 40px;
+}
+
+.b-form__politconf {
+	margin: 0 0 28px;
+}
+
+.formfield_error .formfield__msg {
+	display: block;
+}
+
+.formfield_error .formfield__input, .formfield_error .formfield__textarea {
+	border-color: #e2241b;
+}
+
+.formfield__label {
+	margin: 0 0 14px;
+	font-size: 14px;
+	line-height: 12px;
+}
+
+.formfield__label span {
+	font-family: 'GothamPro';
+	font-weight: 700;
+	color: #e2241b;
+}
+
+.formfield__input {
+	height: 44px;
+	padding: 0 20px;
+}
+
+.formfield__textarea {
+	min-height: 95px;
+	padding: 12px 20px;
+}
+
+.formfield__input, .formfield__textarea {
+	width: 100%;
+	background-color: #ffffff;
+	border: solid 1px #474747;
+	outline: none !important;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.formfield__input::-webkit-input-placeholder, .formfield__textarea::-webkit-input-placeholder {
+	opacity: 0.5;
+}
+
+.formfield__input::-moz-placeholder, .formfield__textarea::-moz-placeholder {
+	opacity: 0.5;
+}
+
+.formfield__input:-moz-placeholder, .formfield__textarea:-moz-placeholder {
+	opacity: 0.5;
+}
+
+.formfield__input:-ms-input-placeholder, .formfield__textarea:-ms-input-placeholder {
+	opacity: 0.5;
+}
+
+.formfield__msg {
+	color: #e2241b;
+	display: none;
+}
+
+.formcheck {
+	position: relative;
+	padding-left: 34px;
+}
+
+.formcheck__input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+
+.formcheck__input:checked + .formcheck__label::after {
+	opacity: 1;
+}
+
+.formcheck__label {
+	margin: 0;
+	font-size: 11px;
+	line-height: 22px;
+	letter-spacing: 0.46px;
+	color: #474747;
+}
+
+.formcheck__label::before, .formcheck__label::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.formcheck__label::before {
+	background-image: url("/img/check-out.svg");
+}
+
+.formcheck__label::after {
+	background-image: url("/img/check-in.svg");
+	opacity: 0;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.formcheck__label a {
+	color: #474747;
+	text-decoration: underline;
+}
