@@ -133,5 +133,22 @@ $(function() {
 			$('.header-menu').removeClass('open-search');
 		}
 	});
+
+	/* Обработка форм (отключение возможности отправки при неактивном инпуте) */
+	$('form').each(function(id, form) {
+		var $checkboxes = $(form).find('input[type="checkbox"]');
+		var $submit = $(form).find('button[type="submit"]');
+		var $politconf;
+		$checkboxes.each(function(id, checkbox) {
+			if( checkbox.id.toLowerCase().indexOf('politconf') !== -1 ) $politconf = $(checkbox);
+		});
+
+		if( $politconf && $politconf.length && $submit && $submit.length ) {
+			$submit.attr('disabled', !$politconf[0].checked);
+			$politconf.on('change', function() {
+				$submit.attr('disabled', !$politconf[0].checked);
+			});
+		}
+	});
 });
 
