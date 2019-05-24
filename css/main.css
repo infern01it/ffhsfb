@@ -4721,3 +4721,7 @@ a.sm-text:hover, a.more-link__text:hover {
 	text-transform: uppercase;
 	margin: 0 0 8px;
 }
+
+.s-help-callback__desc {
+	margin-bottom: 72px;
+}
