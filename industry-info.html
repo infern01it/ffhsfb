@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
+
+	<title>Отрасль (одна)</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-		<title>Отрасль (одна)</title>
-		<meta name="description" content="">
+	<meta property="og:image" content="path/to/image.jpg">
 	
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<meta property="og:image" content="path/to/image.jpg">
-		
-		<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
-		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-		
-		<link rel="stylesheet" href="css/reboot.css">
-		<link rel="stylesheet" href="css/libs/slick.css">
-		<link rel="stylesheet" href="css/libs/slick-theme.css">
-		<link rel="stylesheet" href="css/main.css">
-		
-		<script src="js/libs/jquery-3.2.1.min.js"></script>
-		<script src="js/libs/slick.min.js"></script>
-		<script src="js/libs/jquery.switchPopup.js"></script>
-		<script src="js/common.js"></script>
-		<script src="js/b-slider-popup.js"></script>
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	
+	<link rel="stylesheet" href="css/reboot.css">
+	<link rel="stylesheet" href="css/libs/slick.css">
+	<link rel="stylesheet" href="css/libs/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="js/libs/jquery-3.2.1.min.js"></script>
+	<script src="js/libs/jquery.smoothscroll.js"></script>
+	<script src="js/libs/slick.min.js"></script>
+	<script src="js/libs/jquery.switchPopup.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/b-photo-slider.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -283,8 +284,8 @@
 		</div>
 	</header>
 	
-	<main class="main p-industry-info">
-		<section class="p-industry-info__head s-head">
+	<main class="main">
+		<section class="s-head">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-2">
@@ -302,7 +303,7 @@
 			</div>
 		</section>
 
-		<section class="p-industry-info__desc s-start-desc">
+		<section class="s-start-desc">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
@@ -315,7 +316,7 @@
 			</div>
 		</section>
 
-		<section class="p-industry-info__statistics s-default s-industry-info-statistics">
+		<section class="s-default s-default_pt">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
@@ -324,21 +325,21 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="s-industry-info-statistics__col">
-						<div class="s-industry-info-statistics__card b-statistic">
+				<div class="s-default__row_lg_3 s-default__row_md_3 s-default__row_sm_1 row">
+					<div class="s-default__col">
+						<div class="s-default__card b-statistic">
 							<h4 class="b-statistic__title h1">1 236 700</h4>
 							<span class="b-statistic__subtitle sm-text">Торговых точек в РФ</span>
 						</div>
 					</div>
-					<div class="s-industry-info-statistics__col">
-						<div class="s-industry-info-statistics__card b-statistic">
+					<div class="s-default__col">
+						<div class="s-default__card b-statistic">
 							<h4 class="b-statistic__title h1">178</h4>
 							<span class="b-statistic__subtitle sm-text">Компаний</span>
 						</div>
 					</div>
-					<div class="s-industry-info-statistics__col">
-						<div class="s-industry-info-statistics__card b-statistic">
+					<div class="s-default__col">
+						<div class="s-default__card b-statistic">
 							<h4 class="b-statistic__title h1">10</h4>
 							<span class="b-statistic__subtitle sm-text">Стран</span>
 						</div>
@@ -347,7 +348,7 @@
 			</div>
 		</section>
 
-		<section class="p-industry-info__desc s-default s-start-desc">
+		<section class="s-start-desc">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
@@ -365,30 +366,30 @@
 			</div>
 		</section>
 
-		<section class="p-industry-info__photo s-default s-project-info-photo">
-			<div class="s-project-info-photo__slider slider-popup">
-				<div class="slider-popup__slick">
-					<div class="slider-popup__item">
-						<img src="/content/slider/img-1.png" class="slider-popup__img slider-popup__img_full">
+		<section class="s-default s-default_pt">
+			<div class="s-project-info-photo__slider b-photo-slider">
+				<div class="b-photo-slider__slick">
+					<div class="b-photo-slider__item">
+						<img src="content/slider/img-1.png" class="b-photo-slider__img b-photo-slider__img_full">
 					</div>
-					<div class="slider-popup__item">
-						<img src="/content/slider/img-2.png" class="slider-popup__img slider-popup__img_full">
+					<div class="b-photo-slider__item">
+						<img src="content/slider/img-2.png" class="b-photo-slider__img b-photo-slider__img_full">
 					</div>
-					<div class="slider-popup__item">
-						<img src="/content/slider/img-3.png" class="slider-popup__img slider-popup__img_full">
+					<div class="b-photo-slider__item">
+						<img src="content/slider/img-3.png" class="b-photo-slider__img b-photo-slider__img_full">
 					</div>
 				</div>
-				<button class="slider-popup__arrow slider-popup__arrow_left"></button>
-				<button class="slider-popup__arrow slider-popup__arrow_right"></button>
+				<button class="b-photo-slider__arrow b-photo-slider__arrow_left"></button>
+				<button class="b-photo-slider__arrow b-photo-slider__arrow_right"></button>
 			</div>
 			<script>
 				$(function() {
-					window.initSliderPopup('slider-popup');
+					window.initSliderPopup('b-photo-slider');
 				});
 			</script>
 		</section>
 
-		<section class="p-industry-info__next s-next">
+		<section class="s-next">
 			<div class="container">
 				<div class="row">
 					<div class="col-6 col-md-6 col-lg-2 offset-lg-2">

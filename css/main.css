@@ -4630,6 +4630,22 @@ a.sm-text:hover, a.more-link__text:hover {
 
 /* Страница: Новости (список) */
 /* Страница: Отрасли (список) */
+.b-statistic {
+	padding: 65px 30px;
+	background-color: #f8f7f7;
+	text-align: center;
+}
+
+.b-statistic__title {
+	margin: 0 0 13px;
+}
+
+@media (max-width: 767.98px) {
+	.b-statistic {
+		padding: 34px 42px;
+	}
+}
+
 /* Страница: Решение (одно) */
 .s-solution-info-head {
 	padding: 105px 0;
