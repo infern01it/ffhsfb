@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Каталог - Продукт</title>
+	<title>Контентная страница</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,20 +17,16 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 	
 	<link rel="stylesheet" href="css/reboot.css">
-	<link rel="stylesheet" href="css/libs/slick.css">
-	<link rel="stylesheet" href="css/libs/slick-theme.css">
 	<link rel="stylesheet" href="css/main.css">
 	
 	<script src="js/libs/jquery-3.2.1.min.js"></script>
 	<script src="js/libs/jquery.smoothscroll.js"></script>
-	<script src="js/libs/slick.min.js"></script>
 	<script src="js/libs/jquery.switchPopup.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/b-photo-slider.js"></script>
-	<script src="js/p-catalog-product.js"></script>
 	<script src="js/b-accord-grid.js"></script>
 	<script src="js/b-accordion.js"></script>
-	<script src="js/b-tabs.js"></script>
+	<script src="js/p-content.js"></script>
+
 </head>
 <body>
 	<header class="header">
@@ -287,98 +283,36 @@
 			</div>
 		</div>
 	</header>
-
+	
 	<main class="main">
-		<section class="s-catalog-product-main">
+		<section class="s-head">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 col-md-6 col-lg-8">
-						<a href="#" class="s-catalog-product-main__back more-link">
-							<img src="img/arrow-more.svg" class="more-link__arrow img-svg">
-							<span class="more-link__text">Все новости</span>
-						</a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-6 col-md-6 col-lg-4">
-						<div class="s-catalog-product-main__big-slider">
-							<div class="product-priview-slider-big">
-								<div class="product-priview-slider-big__slider">
-									<div class="product-priview-slider-big__item">
-										<img src="content/catalog-category/img-1.png" class="product-priview-slider-big__img">
-									</div>
-									<div class="product-priview-slider-big__item">
-										<img src="content/catalog-category/img-2.png" class="product-priview-slider-big__img">
-									</div>
-									<div class="product-priview-slider-big__item">
-										<img src="content/catalog-category/img-3.png" class="product-priview-slider-big__img">
-									</div>
-									<div class="product-priview-slider-big__item">
-										<img src="content/catalog-category/img-4.png" class="product-priview-slider-big__img">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="s-catalog-product-main__small-slider">
-							<div class="product-priview-slider-small">
-								<div class="product-priview-slider-small__slider">
-									<div class="product-priview-slider-small__item">
-										<img src="content/catalog-category/img-1.png" class="product-priview-slider-small__img">
-									</div>
-									<div class="product-priview-slider-small__item">
-										<img src="content/catalog-category/img-2.png" class="product-priview-slider-small__img">
-									</div>
-									<div class="product-priview-slider-small__item">
-										<img src="content/catalog-category/img-3.png" class="product-priview-slider-small__img">
-									</div>
-									<div class="product-priview-slider-small__item">
-										<img src="content/catalog-category/img-4.png" class="product-priview-slider-small__img">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-6 col-md-6 col-lg-4">
-						<div class="product-preview-info">
-							<h2 class="product-preview-info__title">Linea pro 500</h2>
-							<span class="product-preview-info__subtitle sm-text">Default</span>
-							<div class="product-preview-info__buttons">
-								<button class="product-preview-info__send btn">Отправить запрос</button>
-								<button class="product-preview-info__download btn btn_white btn_icon_left">
-									<img src="img/docs/pdf-icon.svg" class="img-svg">
-									<span>Скачать презентацию</span>
-								</button>
-							</div>
-							<div class="product-preview-info__desc b-content">
-								<p>В основе представленного решения лежит система отслеживания товара при помощи RFID – меток, которая позволяет видеть товар на каждом этапе в цепочке «производство — транспортная компания — магазин». С помощью оборудования Linea Pro с опцией чтения RFID – меток осуществляется сканирование товарной единицы, а антенны определяют местоположение товара в режиме реального времени. Визуализация на компьютере отображает фактическое местонахождение любой единицы, тем самым обеспечивая удобство контроля за товаром и его перемещением.</p>
-							</div>
+					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
+						<div class="s-head__title-wrap">
+							<h1 class="s-head__title h1">Использование cookies</h1>
 						</div>
 					</div>
 				</div>
 			</div>
+		</section>
 
-			<div class="product-popup">
-				<div class="product-popup__wrap">
-					<button class="product-popup__close btn-close js-tgl-product-popup"></button>
-					<div class="product-popup__slider b-photo-slider">
-						<div class="b-photo-slider__slick">
-							<div class="b-photo-slider__item">
-								<img src="content/catalog-category/img-1.png" class="b-photo-slider__img">
-							</div>
-							<div class="b-photo-slider__item">
-								<img src="content/catalog-category/img-2.png" class="b-photo-slider__img">
-							</div>
-							<div class="b-photo-slider__item">
-								<img src="content/catalog-category/img-3.png" class="b-photo-slider__img">
-							</div>
-							<div class="b-photo-slider__item">
-								<img src="content/catalog-category/img-4.png" class="b-photo-slider__img">
-							</div>
+		<section class="s-default s-default_p">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
+						<div class="b-content b-desc">
+							<h4>Что такое cookie?</h4>
+							<p>Cookie – это простой текстовый файл, который создается веб-сервером и хранится на вашем компьютере или мобильном устройстве. Только этот веб-сервер будет иметь возможность получать или считывать содержимое этих сookie.</p>
+							<p>Cookie индивидуальны для вашего веб-браузера. Они содержат определенные личные данные – уникальный идентификатор, название сайта и некоторые числа. С помощью cookie веб-сайт запоминает некоторые данные, такие как ваши личные настройки.</p>
+							<p>Файлы сookie могут быть установлены веб-сайтом, который вы посещаете («основные файлы сookie»), или они могут быть установлены другими веб-сайтами, которые запускают содержимое на странице, которую вы просматриваете («сторонние файлы сookie»).</p>
+							<p>Для получения подробной информации о файлах сookie на веб-сайте HowStuffWorks приведено подробное руководство: Как работают файлы cookie в Интернете</p>
+
+							<h4>Разрешить/Запретить cookie</h4>
+
+							<p>Пользуясь наши веб-сайтом, вы даете согласие на использование и хранение файлов сookie на вашем устройстве. Вы можете просматривать наш веб-сайт без использования файлов сookie, но при этом некоторые сервисы, доступные для вас, будут ограничены.</p>
+							<p>Вы можете отключить сохранение файлов сookie на вашем устройстве, выбрав в настройках своего браузера опцию "не принимать файлы cookie". Следует помнить, что большинство браузеров принимают файлы cookie автоматически. <br>Ко всему прочему, вы можете в любое время удалить файлы cookie, которые были сохранены на вашем устройстве. Инструкции по удалению файлов cookie можно найти в руководстве к браузеру или устройству.</p>
 						</div>
-						<button class="b-photo-slider__arrow b-photo-slider__arrow_left"></button>
-						<button class="b-photo-slider__arrow b-photo-slider__arrow_right"></button>
 					</div>
 				</div>
 			</div>
@@ -387,14 +321,14 @@
 		<section class="s-default">
 			<div class="container">
 				<div class="b-accordion">
-					<div class="b-accordion__item">
+					<div class="b-accordion__item active">
 						<div class="b-accordion__head">
-							<h3 class="b-accordion__title">Характеристики</h3>
+							<h3 class="b-accordion__title">Основные файлы cookie</h3>
 							<button class="b-accordion__btn">
-								<img src="/img/minus.svg" class="img-svg">
+								<img src="img/minus.svg" class="img-svg">
 							</button>
 						</div>
-						<div class="b-accordion__body" style="display: none">
+						<div class="b-accordion__body" style="display: block">
 							<div class="row">
 								<div class="col-6 col-md-6 offset-lg-2 col-lg-6">
 									<div class="product-specifications">
@@ -574,122 +508,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-accordion__item">
-						<div class="b-accordion__head">
-							<h3 class="b-accordion__title">Доступные конфигурации</h3>
-							<button class="b-accordion__btn">
-								<img src="/img/minus.svg" class="img-svg">
-							</button>
-						</div>
-						<div class="b-accordion__body" style="display: none">
-							<div class="product-configurations">
-								<div class="product-configurations__row product-configurations__row_first row">
-									<div class="col-6 col-md-6 col-lg-2">
-										<div class="product-configurations__title-col">
-											<span class="sm-text">Артикул</span>
-										</div>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-col">
-											<span class="sm-text">Модель</span>
-										</div>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-col">
-											<span class="sm-text">Опции</span>
-										</div>
-									</div>
-								</div>
-								<div class="product-configurations__row row">
-									<div class="col-6 col-md-6 col-lg-2">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Артикул</span>
-										</div>
-										<h4 class="product-configurations__name h4">DPHLP5IPDMSRB TRF2D-I</h4>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Модель</span>
-										</div>
-										<div class="product-configurations__desc b-content">
-											<p>Чехол-расширитель Linea Pro 5.0 для iPod 2D Intermec BT RFID</p>
-										</div>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Опции</span>
-										</div>
-										<div class="product-configurations__props b-content">
-											<ul>
-												<li>Newland EM3070* — Image Sensor 752×480 CMOS</li>
-												<li>Двухмерный высокопроизводительный сканер штрих-кодов</li>
-												<li>Intermec EA-30 — Image Sensor 752×480 CMOS</li>
-												<li>Двухмерный высокопроизводительный сканер штрих-кодов</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="product-configurations__row row">
-									<div class="col-6 col-md-6 col-lg-2">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Артикул</span>
-										</div>
-										<h4 class="product-configurations__name h4">DPHLP5IPDMSRB TRF2D-I</h4>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Модель</span>
-										</div>
-										<div class="product-configurations__desc b-content">
-											<p>Чехол-расширитель Linea Pro 5.0 для iPod 2D Intermec BT RFID</p>
-										</div>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Опции</span>
-										</div>
-										<div class="product-configurations__props b-content">
-											<ul>
-												<li>Newland EM3070* — Image Sensor 752×480 CMOS</li>
-												<li>Двухмерный высокопроизводительный сканер штрих-кодов</li>
-												<li>Intermec EA-30 — Image Sensor 752×480 CMOS</li>
-												<li>Двухмерный высокопроизводительный сканер штрих-кодов</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="product-configurations__row row">
-									<div class="col-6 col-md-6 col-lg-2">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Артикул</span>
-										</div>
-										<h4 class="product-configurations__name h4">DPHLP5IPDMSRB TRF2D-I</h4>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Модель</span>
-										</div>
-										<div class="product-configurations__desc b-content">
-											<p>Чехол-расширитель Linea Pro 5.0 для iPod 2D Intermec BT RFID</p>
-										</div>
-									</div>
-									<div class="col-6 col-md-6 col-lg-3">
-										<div class="product-configurations__title-cell">
-											<span class="sm-text">Опции</span>
-										</div>
-										<div class="product-configurations__props b-content">
-											<ul>
-												<li>Newland EM3070* — Image Sensor 752×480 CMOS</li>
-												<li>Двухмерный высокопроизводительный сканер штрих-кодов</li>
-												<li>Intermec EA-30 — Image Sensor 752×480 CMOS</li>
-												<li>Двухмерный высокопроизводительный сканер штрих-кодов</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -697,125 +515,14 @@
 		<section class="s-default s-default_p">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 col-md-6 col-lg-4 offset-lg-2">
-						<div class="s-default__title-wrap">
-							<h3 class="s-default__title h3">Применяется в решениях</h3>
-						</div>
-					</div>
-					<div class="col-6 col-md-6 col-lg-8">
-						<div class="s-default__row_lg_2 s-default__row_md_2 s-default__row_sm_1 row">
-							<div class="s-default__col">
-								<a href="#" class="s-default__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
-									<span class="b-solution__label sm-text">Ритейл / Банки</span>
-									<div class="b-solution__icon">
-										<div class="b-border-icon">
-											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
-											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
-										</div>
-									</div>
-									<div class="b-solution__bottom">
-										<h3 class="b-solution__title h3">store online</h3>
-										<span class="b-solution__desc">Мобильный учет товаров</span>
-									</div>
-								</a>
-							</div>
-							<div class="s-default__col">
-								<a href="#" class="s-default__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
-									<span class="b-solution__label sm-text">Ритейл</span>
-									<div class="b-solution__icon">
-										<div class="b-border-icon">
-											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
-											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
-										</div>
-									</div>
-									<div class="b-solution__bottom">
-										<h3 class="b-solution__title h3">SAle point</h3>
-										<span class="b-solution__desc">Мобильная касса</span>
-									</div>
-								</a>
-							</div>
-							<div class="s-default__col s-default__col_100">
-								<a href="#" class="s-default__card b-solution b-styled b-styled_bg_white b-styled_color_gray">
-									<span class="b-solution__label sm-text">Ритейл / Банки</span>
-									<div class="b-solution__icon">
-										<div class="b-border-icon">
-											<img src="img/ramka.svg" class="b-border-icon__border img-svg">
-											<img src="img/menu-3/retail.svg" class="b-border-icon__icon img-svg">
-										</div>
-									</div>
-									<div class="b-solution__bottom">
-										<h3 class="b-solution__title h3">DPS</h3>
-										<span class="b-solution__desc">Решения для банков</span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+					<div class="col-6 col-md-6 offset-lg-4 col-lg-4">
+						<div class="b-content b-desc">
+							<h4>Классификация сookie</h4>
 
-		<section class="s-catalog-product-tabs">
-			<div class="container">
-				<div class="b-tabs">
-					<div class="b-tabs__head">
-						<div class="b-tabs__h-item active">
-							<button class="b-tabs__btn">Инструкции</button>
-						</div>
-						<div class="b-tabs__h-item">
-							<button class="b-tabs__btn">ПО, SDK и прошивки</button>
-						</div>
-						<div class="b-tabs__h-item">
-							<button class="b-tabs__btn">Видео материалы</button>
-						</div>
-					</div>
-					<div class="b-tabs__body">
-						<div class="b-tabs__b-item active">
-							<ul class="product-instructions-list">
-								<li class="product-instructions-list__item">
-									<img src="img/docs/ru.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Инструкция / Linea Pro 6 / 30.01.19 / Ру</a>
-								</li>
-								<li class="product-instructions-list__item">
-									<img src="img/docs/en.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Instruction / Linea Pro 6 / 30.01.19 / En</a>
-								</li>
-								<li class="product-instructions-list__item">
-									<img src="img/docs/de.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Anweisung / Linea Pro 6 / 30.01.19 / De</a>
-								</li>
-							</ul>
-						</div>
-						<div class="b-tabs__b-item">
-							<ul class="product-instructions-list">
-								<li class="product-instructions-list__item">
-									<img src="img/docs/ru.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Инструкция / Linea Pro 6 / 30.01.19 / Ру</a>
-								</li>
-								<li class="product-instructions-list__item">
-									<img src="img/docs/en.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Instruction / Linea Pro 6 / 30.01.19 / En</a>
-								</li>
-								<li class="product-instructions-list__item">
-									<img src="img/docs/de.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Anweisung / Linea Pro 6 / 30.01.19 / De</a>
-								</li>
-							</ul>
-						</div>
-						<div class="b-tabs__b-item">
-							<ul class="product-instructions-list">
-								<li class="product-instructions-list__item">
-									<img src="img/docs/ru.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Инструкция / Linea Pro 6 / 30.01.19 / Ру</a>
-								</li>
-								<li class="product-instructions-list__item">
-									<img src="img/docs/en.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Instruction / Linea Pro 6 / 30.01.19 / En</a>
-								</li>
-								<li class="product-instructions-list__item">
-									<img src="img/docs/de.svg" class="product-instructions-list__icon img-svg">
-									<a href="#" target="_blank" class="product-instructions-list__link">Anweisung / Linea Pro 6 / 30.01.19 / De</a>
-								</li>
+							<ul>
+								<li><strong>Обязательные:</strong> <br>Эти файлы сookie нужны для того, чтобы пользователь мог перемещаться и пользоваться специальными функциями сайта, например, доступом к защищенным областям страницы. Без них некоторые функции сайта будут недоступны.</li>
+								<li><strong>Показатели:</strong> <br>Эти файлы сookie разрешают веб-сайту сохранять настройки пользователя, такие как параметры языка, в итоге выдавая пользователю исправленную, персонализированную страницу.</li>
+								<li><strong>Категория:</strong> <br>Эти файлы сookie собирают информацию о поведении пользователя. Вся информация собирается анонимно и функциональные файлы сookie не могут отследить активность пользователя на нашем сайте. <br>Эта информация используется для составления отчетов для улучшения веб-сайта. Функциональные файлы сookie также могут включать те, что предоставляют услуги, запрошенные пользователем.</li>
 							</ul>
 						</div>
 					</div>
@@ -823,65 +530,8 @@
 			</div>
 		</section>
 
-		<section class="s-default s-default_p">
-			<div class="container">
-				<div class="row">
-					<div class="col-6 col-lg-4 offset-lg-2">
-						<div class="s-default__title-wrap">
-							<h3 class="s-default__title h3">Доступные аксессуары</h3>
-						</div>
-					</div>
-				</div>
-				<div class="s-default__row_lg_4 s-default__row_md_3 s-default__row_sm_2 row">
-					<div class="s-default__col">
-						<a href="#" class="s-default__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-1.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="s-default__col">
-						<a href="#" class="s-default__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-2.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-					<div class="s-default__col">
-						<a href="#" class="s-default__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-3.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Считыватель магнитной полосы и чип-карт DRD-10</h5>
-								<span class="b-product__subtitle sm-text">Считыватели магнитной полосы</span>
-							</div>
-						</a>
-					</div>
-					<div class="s-default__col">
-						<a href="#" class="s-default__card b-product">
-							<div class="b-product__img-wrap">
-								<img src="content/catalog-category/img-4.png" class="b-product__img">
-							</div>
-							<div class="b-product__content">
-								<h5 class="b-product__title">Linea pro 500</h5>
-								<span class="b-product__subtitle sm-text">Default</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
 	</main>
-
+	
 	<footer class="footer">
 		<div class="footer__top">
 			<div class="container">
