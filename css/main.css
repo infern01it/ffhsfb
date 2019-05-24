@@ -4575,3 +4575,149 @@ a.sm-text:hover, a.more-link__text:hover {
 .s-search__cards:last-child {
 	margin-bottom: 0;
 }
+
+.s-help-product-head {
+	padding-top: 66px;
+}
+
+.s-help-product-head__back {
+	margin-top: 80px;
+}
+
+.s-help-product-head__preview {
+	margin: 0 auto;
+}
+
+@media (max-width: 999.98px) {
+	.s-help-product-head__back {
+		margin-top: 0;
+	}
+}
+
+.b-sm-product__img-wrap {
+	position: relative;
+	width: 140px;
+	height: 140px;
+	margin: 0 auto 19px;
+}
+
+.b-sm-product__img {
+	position: absolute;
+	top: 10px;
+	height: 10px;
+	width: 120px;
+	height: 120px;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.b-sm-product__title {
+	text-align: center;
+	margin: 0;
+}
+
+@media (max-width: 999.98px) {
+	.b-sm-product__img-wrap {
+		width: 90px;
+		height: 90px;
+	}
+
+	.b-sm-product__img {
+		top: 5px;
+		left: 5px;
+		width: 80px;
+		height: 80px;
+	}
+}
+
+.b-video__img-wrap {
+	position: relative;
+	margin: 0 0 39px;
+}
+
+.b-video__img-wrap::before {
+	content: '';
+	float: left;
+	padding-bottom: 56.25%;
+}
+
+.b-video__img-wrap::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.b-video__mask, .b-video__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.b-video__img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.b-video__mask {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.b-video__play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	padding: 0;
+	border: none;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	outline: none !important;
+	background-color: #e2241b;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	cursor: pointer;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.b-video__play::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-right: 10px solid #fff;
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	transform-origin: center;
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+
+.b-video__info {
+	text-align: center;
+}
+
+.b-video__title {
+	text-transform: uppercase;
+	margin: 0 0 8px;
+}
