@@ -149,9 +149,9 @@
 }
 
 .modal-video-close-btn::before {
-	background-image: url("/img/close-out.svg");
+	background-image: url("../img/close-out.svg");
 }
 
 .modal-video-close-btn::after {
-	background-image: url("/img/close-in.svg");
+	background-image: url("../img/close-in.svg");
 }
