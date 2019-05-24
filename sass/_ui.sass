@@ -109,12 +109,20 @@ a.sm-text
 		&:hover
 			background-color: #ffffff
 			color: #1a1a1a !important
+	&_gray
+		background-color: #e5e5e5
+		color: #1a1a1a !important
+		&:hover
+			background-color: darken(#e5e5e5, 5%)
+			color: #1a1a1a !important
 	&_icon_left
 		display: inline-flex
 		justify-content: center
 		align-items: center
 		img, svg
 			margin-right: 20px
+	&_sm
+		min-width: 215px
 
 // Ссылка "подробнее" со стрелкой
 .more-link

@@ -55,6 +55,16 @@ $(function() {
 		btnClass: 'js-tgl-menu',
 		time: 200
 	});
+
+	$('.popup-callback').switchPopup({
+		btnClass: 'js-tgl-callback',
+		time: 200
+	});
+
+	$('.popup-thx').switchPopup({
+		btnClass: 'js-tgl-thx',
+		time: 200
+	});
 	
 	// Выпадающие пункты меню
 	function openMnu(obj, closeAll) {
