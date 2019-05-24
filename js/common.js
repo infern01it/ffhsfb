@@ -150,5 +150,10 @@ $(function() {
 			});
 		}
 	});
+
+	/* Плагин воспроизведения видео в лайтбоксе */
+	if( $(".js-video-play").length ) {
+		$(".js-video-play").modalVideo();
+	}
 });
 
