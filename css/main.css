@@ -2,13 +2,13 @@
 
 @font-face {
 	font-family: "GothamPro";
-  src: url("/fonts/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro/GothamPro.woff") format("woff"), url("/fonts/GothamPro/GothamPro.ttf") format("truetype");
+  src: url("../fonts/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro.woff") format("woff"), url("../fonts/GothamPro/GothamPro.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
 	font-family: "GothamPro";
-  src: url("/fonts/GothamPro-Medium/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/GothamPro-Medium/GothamPro-Medium.woff") format("woff"), url("/fonts/GothamPro-Medium/GothamPro-Medium.ttf") format("truetype");
+  src: url("../fonts/GothamPro-Medium/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Medium/GothamPro-Medium.woff") format("woff"), url("../fonts/GothamPro-Medium/GothamPro-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
@@ -3961,7 +3961,7 @@ a.sm-text:hover, a.more-link__text:hover {
 .product-priview-slider-big__item {
 	position: relative;
 	padding: 80px;
-	cursor: url("/img/cursor.jpg"), pointer;
+	cursor: url("../img/cursor.jpg"), pointer;
 }
 
 .product-priview-slider-big__item::before {
@@ -4110,11 +4110,11 @@ a.sm-text:hover, a.more-link__text:hover {
 }
 
 .btn-close::before {
-	background-image: url("/img/close-out.svg");
+	background-image: url("../img/close-out.svg");
 }
 
 .btn-close::after {
-	background-image: url("/img/close-in.svg");
+	background-image: url("../img/close-in.svg");
 }
 
 .product-preview-info__title {
@@ -4813,11 +4813,11 @@ a.sm-text:hover, a.more-link__text:hover {
 }
 
 .formcheck__label::before {
-	background-image: url("/img/check-out.svg");
+	background-image: url("../img/check-out.svg");
 }
 
 .formcheck__label::after {
-	background-image: url("/img/check-in.svg");
+	background-image: url("../img/check-in.svg");
 	opacity: 0;
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
