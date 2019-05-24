@@ -90,18 +90,4 @@ $(function() {
 	$('.b-accordion').on('toggle', function() {
 		resizeAllGridItems();
 	});
-
-	// Табы
-	$('.product-tabs__btn').on('click', function() {
-		$parent = $(this).parent();
-
-		if( !$parent.hasClass('active') ) {
-			var n = $parent.index();
-			$('.product-tabs__h-item').removeClass('active');
-			$('.product-tabs__b-item').removeClass('active');
-			$parent.addClass('active');
-			$($('.product-tabs__b-item').get(n)).addClass('active');
-		}
-	});
-
 });
