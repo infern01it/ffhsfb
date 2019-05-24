@@ -28,6 +28,7 @@
 	<script src="js/libs/jquery.switchPopup.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/p-home.js"></script>
+	<script src="js/popup-notification.js"></script>
 </head>
 
 <body>
@@ -1003,5 +1004,99 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="popup popup-callback">
+		<div class="popup__bg js-tgl-callback"></div>
+		<div class="popup__wrap popup-callback__wrap">
+			<button class="popup__close btn-close js-tgl-callback"></button>
+
+			<h3 class="popup__title popup-callback__title h3">Отправить запрос</h3>
+			
+			<form class="b-form">
+				<div class="b-form__field">
+					<div class="formfield formfield_error">
+						<label for="name" class="formfield__label">Ваше имя <span>*</span></label>
+						<input id="name" type="text" class="formfield__input" placeholder="Имя…">
+						<span class="formfield__msg">Здесь пишем текст ошибки</span>
+					</div>
+				</div>
+
+				<div class="b-form__field">
+					<div class="formfield">
+						<label for="phone" class="formfield__label">Ваш телефон <span>*</span></label>
+						<input id="phone" type="text" class="formfield__input" placeholder="+7…">
+					</div>
+				</div>
+
+				<div class="b-form__field">
+					<div class="formfield">
+						<label for="email" class="formfield__label">Ваш Email <span>*</span></label>
+						<input id="email" type="text" class="formfield__input" placeholder="Email…">
+					</div>
+				</div>
+
+				<div class="b-form__field">
+					<div class="formfield">
+						<label for="email" class="formfield__label">Компания <span>*</span></label>
+						<input id="email" type="text" class="formfield__input" placeholder="Название компании…">
+					</div>
+				</div>
+
+				<div class="b-form__field">
+					<div class="formfield">
+						<label for="email" class="formfield__label">Ваше сообщение <span>*</span></label>
+						<textarea id="" class="formfield__textarea" placeholder="Ваше сообщение…"></textarea>
+					</div>
+				</div>
+
+				<div class="b-form__politconf">
+					<div class="formcheck">
+						<input type="checkbox" name="politconf" id="politconf-popup-callback-form" class="formcheck__input">
+						<label for="politconf-popup-callback-form" class="formcheck__label">Даю согласие на обработку персональных данных, а также соглашаюсь с Условиями и <a href="#" target="_blank">Политикой конфиденциальности</a></label>
+					</div>
+				</div>
+
+				<button class="b-form__btn btn" type="submit">Отправить запрос</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="popup popup-thx">
+		<div class="popup__bg js-tgl-thx"></div>
+		<div class="popup__wrap popup-thx__wrap">
+			<button class="popup__close btn-close js-tgl-thx"></button>
+
+			<h3 class="popup__title popup-thx__title h3">Спасибо за обращение</h3>
+
+			<div class="popup-thx__desc b-content">
+				<p>Мы рассмотрим ваше обращение и наши специалисты свяжутся с вами по указанным контактным данным для поддержки и оказания помощи</p>
+			</div>
+
+			<div class="popup-thx__btn">
+				<button class="btn js-thl-thx">Ок</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-notification">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-6 col-lg-6">
+					<div class="popup-notification__desc">
+						<div class="b-content sm-text">
+							<p>Этот Сайт использует файлы cookie для более удобной работы с ним. Продолжая любое дальнейшее использование сайта и/или сервисов Сайта, Вы соглашаетесь с этим. Более подробная информация доступна в «<a href="#" target="_blank">Политике конфиденциальности</a>» и в «<a href="#" target="_blank">Политике cookies</a>»</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-md-6 col-lg-2">
+					<div class="popup-notification__btn">
+						<button class="btn btn_gray btn_sm js-tgl-notification">Хорошо, продолжим</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
