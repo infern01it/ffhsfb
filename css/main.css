@@ -385,6 +385,13 @@ a.sm-text:hover, a.more-link__text:hover {
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+	padding-right: 44px;
+}
+
+.formselect-radio__value span {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 
 .formselect-radio__list {
@@ -4905,6 +4912,9 @@ a.sm-text:hover, a.more-link__text:hover {
 
 .b-tabs-left__head {
 	padding-top: 28px;
+}
+
+.b-tabs-left__head_desc {
 	padding-right: 20px;
 }
 
