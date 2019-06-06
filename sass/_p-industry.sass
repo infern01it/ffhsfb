@@ -12,3 +12,32 @@
 +media(sm)
 	.b-statistic
 		padding: 34px 42px
+
+.b-tabs-left
+	&__head
+		padding-top: 28px
+		padding-right: 20px
+		&_mob
+			display: none
+	&__h-item
+		padding: 0 30px 10px 0
+		margin: 0 0 50px
+		border-bottom: 2px solid rgba($ac, 0)
+		transition: all .2s ease-out
+		*:last-child
+			margin: 0
+		&.active
+			border-color: rgba($ac, 1)
+	&__body
+	&__b-item
+		display: none
+		&.active
+			display: block
+
++media(md)
+	.b-tabs-left
+		&__head
+			&_mob
+				display: block
+			&_desc
+				display: none

@@ -285,6 +285,189 @@ a.sm-text:hover, a.more-link__text:hover {
 	background-color: #e2241b;
 }
 
+.form-wraper {
+	position: relative;
+	z-index: 1;
+}
+
+.form-wraper__label {
+	display: block;
+	font-family: 'LiberationSerif';
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	color: #1a1a1a;
+	margin: 0 0 8px;
+}
+
+.form-wraper__box {
+	width: 100%;
+	height: -webkit-calc(100% - 24px);
+	height: calc(100% - 24px);
+}
+
+.form-wraper__box[type=number]::-webkit-inner-spin-button, .form-wraper__box[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+.form-wraper__box[type=number] {
+	-moz-appearance: textfield;
+}
+
+.form-wraper__box::-webkit-input-placeholder {
+	color: #bfbfbf;
+}
+
+.form-wraper__box::-moz-placeholder {
+	color: #bfbfbf;
+}
+
+.form-wraper__box:-moz-placeholder {
+	color: #bfbfbf;
+}
+
+.form-wraper__box:-ms-input-placeholder {
+	color: #bfbfbf;
+}
+
+.form-wraper__button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	outline: none !important;
+	cursor: pointer;
+}
+
+.form-box {
+	display: block;
+	min-height: 44px;
+	padding: 11px 20px;
+	background-color: #ffffff;
+	border: 1px solid #474747;
+	outline: none !important;
+	font-size: 14px;
+	line-height: 22px;
+	color: #1a1a1a;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.form-box span {
+	display: block;
+	line-height: 20px;
+}
+
+.form-box::-webkit-outer-spin-button,
+.form-box::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+/* Выпадающее меню с радиокнопками */
+.formselect-radio {
+	position: relative;
+	z-index: 1;
+}
+
+.formselect-radio__value {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+.formselect-radio__list {
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	left: 0;
+	display: none;
+	width: 100%;
+	max-height: 25vh;
+	overflow: auto;
+	margin: 0;
+	padding: 0 0 8px;
+	background-color: #f2f2f2;
+}
+
+.formselect-radio__item {
+	list-style: none;
+	width: 100%;
+}
+
+.formselect-radio__item input[type="radio"] {
+	display: none;
+}
+
+.formselect-radio__item input[type="radio"]:checked + label {
+	color: rgba(26, 26, 26, 0.5);
+}
+
+.formselect-radio__item label {
+	display: block;
+	width: 100%;
+	min-height: 40px;
+	line-height: 24px;
+	margin: 0;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.formselect-radio__item label:hover, .formselect-radio__item label:focus {
+	color: rgba(26, 26, 26, 0.5);
+}
+
+.formselect-radio__arrow {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.formselect-radio__arrow::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #474747;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	transform-origin: center;
+}
+
+.formselect-radio.open {
+	z-index: 15;
+}
+
+.formselect-radio.open .formselect-radio__list {
+	display: block;
+}
+
+.formselect-radio.error .formselect-radio__list {
+	border-color: #ff8b8b;
+}
+
 .container {
 	width: 100%;
 	max-width: 1320px;
@@ -1710,6 +1893,9 @@ a.sm-text:hover, a.more-link__text:hover {
 	min-height: 50px;
 	padding-left: 88px;
 	text-decoration: none !important;
+	border: none;
+	outline: none !important;
+	background-color: transparent;
 	cursor: pointer;
 }
 
@@ -1742,10 +1928,12 @@ a.sm-text:hover, a.more-link__text:hover {
 .icon-menu__title {
 	color: #1a1a1a;
 	margin: 0;
+	text-align: left;
 }
 
 .icon-menu__desc {
 	line-height: 10px;
+	text-align: left;
 }
 
 .icon-menu_desc .icon-menu__title {
@@ -3919,6 +4107,69 @@ a.sm-text:hover, a.more-link__text:hover {
 	}
 }
 
+.b-product-2 {
+	display: block;
+	height: 286px;
+	padding: 36px 30px 0;
+	text-decoration: none !important;
+}
+
+.b-product-2__img-wrap {
+	position: relative;
+	width: 100%;
+	max-width: 140px;
+	margin: 0 auto 38px;
+}
+
+.b-product-2__img-wrap::before {
+	content: '';
+	float: left;
+	padding-bottom: 100%;
+}
+
+.b-product-2__img-wrap::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.b-product-2__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: continue;
+	object-fit: continue;
+	-o-object-position: 50% 50%;
+	object-position: 50% 50%;
+}
+
+.b-product-2__content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.b-product-2__title {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #1a1a1a;
+}
+
 /* Страница: Каталог - Продукт */
 .s-catalog-product-main {
 	padding-top: 10px;
@@ -4643,6 +4894,50 @@ a.sm-text:hover, a.more-link__text:hover {
 @media (max-width: 767.98px) {
 	.b-statistic {
 		padding: 34px 42px;
+	}
+}
+
+.b-tabs-left__head {
+	padding-top: 28px;
+	padding-right: 20px;
+}
+
+.b-tabs-left__head_mob {
+	display: none;
+}
+
+.b-tabs-left__h-item {
+	padding: 0 30px 10px 0;
+	margin: 0 0 50px;
+	border-bottom: 2px solid rgba(226, 36, 27, 0);
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.b-tabs-left__h-item *:last-child {
+	margin: 0;
+}
+
+.b-tabs-left__h-item.active {
+	border-color: #e2241b;
+}
+
+.b-tabs-left__b-item {
+	display: none;
+}
+
+.b-tabs-left__b-item.active {
+	display: block;
+}
+
+@media (max-width: 999.98px) {
+	.b-tabs-left__head_mob {
+		display: block;
+	}
+
+	.b-tabs-left__head_desc {
+		display: none;
 	}
 }
 
