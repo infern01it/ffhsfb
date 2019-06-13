@@ -2665,6 +2665,11 @@ a.sm-text:hover, a.more-link__text:hover {
 	color: #ffffff !important;
 }
 
+.footer-menu__footer-link {
+	display: inline-block;
+	margin-top: 20px;
+}
+
 .footer-menu__list {
 	margin: 0;
 	padding: 0;
@@ -4225,7 +4230,7 @@ a.sm-text:hover, a.more-link__text:hover {
 .product-priview-slider-big__item {
 	position: relative;
 	padding: 80px;
-	cursor: url("../img/cursor.jpg"), pointer;
+	cursor: url("../img/cursor.png"), pointer;
 }
 
 .product-priview-slider-big__item::before {
@@ -5195,8 +5200,8 @@ a.sm-text:hover, a.more-link__text:hover {
 	height: 10px;
 	width: 120px;
 	height: 120px;
-	-o-object-fit: cover;
-	object-fit: cover;
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .b-sm-product__title {

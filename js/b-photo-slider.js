@@ -8,7 +8,7 @@ $(function() {
 		if( slider.length ) {
 			slider.slick({
 				lazyLoad: 'ondemand',
-				slidesToShow: 2,
+				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: false,
 				arrows: false,
