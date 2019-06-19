@@ -166,6 +166,11 @@ $(function() {
 		$(".js-video-play").modalVideo();
 	}
 
+	/* Инициализация маски телефона */
+	if( $('input[type="tel"]').length ) {
+		var phoneInput = $('input[type="tel"]')[0];
+		new Inputmask("+7(999)999-99-99").mask(phoneInput);
+	}
 	
 	/* Выпадающий список (радиокнопки замаскированные под select) */
 	// Открытие выпадашки по клику на нее
