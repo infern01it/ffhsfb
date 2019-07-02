@@ -19,8 +19,8 @@
 // Каточка продукта
 .b-product
 	display: block
-	height: 374px
-	padding: 40px 50px 0
+	min-height: 374px
+	padding: 40px 50px 20px
 	text-decoration: none !important
 	background-color: #f8f7f7
 	&__img-wrap
@@ -52,8 +52,8 @@
 
 +media(md)
 	.b-product
-		padding: 25px 12px 0
-		height: 264px
+		padding: 25px 12px 10px
+		min-height: 264px
 		&__img-wrap
 			&::before,
 			&::after

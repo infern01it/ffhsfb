@@ -2,9 +2,10 @@ $lgHeight: 88px
 $smHeight: 57px
 	
 .header
-	position: relative
+	position: fixed
 	z-index: 100
 	width: 100%
+	background-color: #ffffff
 	&__left,
 	&__right
 		height: $lgHeight
@@ -296,6 +297,7 @@ $smHeight: 57px
 		display: flex
 		align-items: center
 		height: 125px
+		list-style: none
 	&_el_1x4 // 1 строка 4 столбца
 		#{$p}
 			&__item
@@ -373,6 +375,7 @@ $smHeight: 57px
 		list-style: none
 	&__item
 		padding: 11px 20px
+		list-style: none
 	&__link
 		display: block
 		width: 100%
