@@ -1248,9 +1248,10 @@ a.sm-text:hover, a.more-link__text:hover {
 }
 
 .header {
-	position: relative;
+	position: fixed;
 	z-index: 100;
 	width: 100%;
+	background-color: #ffffff;
 }
 
 .header__left, .header__right {
@@ -1759,6 +1760,7 @@ a.sm-text:hover, a.more-link__text:hover {
 	-ms-flex-align: center;
 	align-items: center;
 	height: 125px;
+	list-style: none;
 }
 
 .submenu-block_el_1x4 .submenu-block__item {
@@ -1854,6 +1856,7 @@ a.sm-text:hover, a.more-link__text:hover {
 
 .submenu-list__item {
 	padding: 11px 20px;
+	list-style: none;
 }
 
 .submenu-list__link {
@@ -2712,6 +2715,16 @@ a.sm-text:hover, a.more-link__text:hover {
 	font-size: 13px;
 	line-height: 18px;
 	color: #ffffff !important;
+}
+
+.main {
+	padding-top: 88px;
+}
+
+@media (max-width: 767.98px) {
+	.main {
+		padding-top: 57px;
+	}
 }
 
 .s-head {
@@ -4049,8 +4062,8 @@ a.sm-text:hover, a.more-link__text:hover {
 
 .b-product {
 	display: block;
-	height: 374px;
-	padding: 40px 50px 0;
+	min-height: 374px;
+	padding: 40px 50px 20px;
 	text-decoration: none !important;
 	background-color: #f8f7f7;
 }
@@ -4113,8 +4126,8 @@ a.sm-text:hover, a.more-link__text:hover {
 
 @media (max-width: 999.98px) {
 	.b-product {
-		padding: 25px 12px 0;
-		height: 264px;
+		padding: 25px 12px 10px;
+		min-height: 264px;
 	}
 
 	.b-product__img-wrap::before, .b-product__img-wrap::after {
